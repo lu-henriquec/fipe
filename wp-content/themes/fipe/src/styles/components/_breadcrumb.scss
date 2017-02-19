@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  BREADCRUMBS
+//------------------------------------
+
+.breadcrumbs {
+	list-style: none;
+	padding: 0;
+	@include breakpoint(small, 'max') {
+		padding: 0 10px;
+	}
+	li {
+		@include font-size(14px);
+		display: inline-block;
+		margin-right: 8px;
+		vertical-align: middle;
+	}
+}

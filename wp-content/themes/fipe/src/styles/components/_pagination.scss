@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  PAGINATION STYLE
+//------------------------------------
+
+.pagination-row {
+	height: 85px;
+	.next, 
+	.prev {
+		display: none;
+	}
+	.page-numbers {
+		@include font-size(16px);
+		border-left: 1px solid $color-one;
+		color: $color-one;
+		font-family: $proximanova-light;
+		padding: 0 15px;
+		&.current {
+			font-family: $proximanova-bold;
+		}
+		&.prev + a {
+			border: none;
+		}
+		&:first-child {
+			border: none;
+		}
+	}
+}

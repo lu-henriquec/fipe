@@ -1,0 +1,191 @@
+@charset 'UTF-8';
+
+$slick-loader-path        : './' !default;
+$slick-arrow-color        : #fff !default;
+$slick-dot-color          : #fff !default;
+$slick-dot-color-active   : #fff !default;
+$slick-prev-character     : '\e901' !default;
+$slick-next-character     : '\e901' !default;
+$slick-dot-character      : '•' !default;
+$slick-dot-size           : 35px !default;
+$slick-opacity-default    : .75 !default;
+$slick-opacity-on-hover   : 1 !default;
+$slick-opacity-not-active : .25 !default;
+
+.slick-slider {
+	-khtml-user-select: none;
+	-moz-box-sizing: border-box;
+	-moz-user-select: none;
+	-ms-touch-action: pan-y;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	box-sizing: border-box;
+	display: block;
+	position: relative;
+	touch-action: pan-y;
+	user-select: none;
+	z-index: 0;
+
+	// @include breakpoint(small, 'max') { padding: 0 50px; }
+
+	@include breakpoint(extra-small, 'max') { padding: 0; }
+
+	* {outline: none!important}
+
+	.slick-track,
+	.slick-list {
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.slick-track {
+	display: block;
+	left: 0;
+	position: relative;
+	top: 0;
+
+	&:before,
+	&:after {
+		content: ' ';
+		display: table;
+	}
+
+	&:after { clear: both; }
+
+	.slick-loading & { visibility: hidden; }
+}
+
+.slick-list {
+	display: block;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+
+	&:focus { outline: none; }
+
+	&.dragging {
+		cursor: pointer;
+		cursor: hand;
+	}
+}
+
+.slick-slide {
+	// display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&.slick-loading {
+		img { display: none; }
+	}
+
+	&.dragging {
+		img { pointer-events: none; }
+	}
+
+	.slick-initialized & { display: block; }
+
+	.slick-loading & { visibility: hidden; }
+
+	.slick-vertical & {
+		border: 1px solid transparent;
+		display: block;
+		height: auto;
+	}
+}
+
+
+/* Arrows */
+
+.slick-arrow {
+	background: rgba(27, 103, 154, .6) 50% 50% no-repeat;
+	border: none;
+	color: $color-four;
+	cursor: pointer;
+	display: block;
+	font-size: 0px;
+	height: 65px;
+	outline: none;
+	padding: 0;
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	width: 60px;
+	z-index: 1;
+	&:before {
+		position: relative;
+	}
+}
+
+
+.slick-prev {
+	background-image: url('images/arrow-left.png');
+	left: 0;
+}
+
+.slick-next {
+	background-image: url('images/arrow-right.png');
+	right: 0;
+}
+
+
+
+/* Dots */
+.slick-dots {
+	@include breakpoint(medium, 'min') { bottom: 30px; }
+	@include breakpoint(medium, 'max') { bottom: 15px; }
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	width: 100%;
+
+	li,
+	button {
+		@include breakpoint(medium, 'max') {
+			height: 15px;
+			width: 15px;
+		}
+		height: 15px;
+		width: 15px;
+		z-index: 0;
+	}
+
+	li {
+		@include breakpoint(extra-small, 'max') {
+			margin: 0 12px;
+		}
+		display: inline-block;
+		margin: 0 10px;
+	}
+
+	button {
+		background-color: $color-one;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		display: block;
+		font-size: 0;
+		transition:  transform .4s ease;
+	}
+
+	.slick-active button {
+		background: $color-three;
+		transform: scale(1.2);
+	}
+}

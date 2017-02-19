@@ -1,0 +1,237 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  MAPA
+//------------------------------------
+
+.mapa {
+	margin-bottom: 40px;
+}
+
+.container__map {
+	background: #1b679a;
+	display: block;
+	overflow: hidden;
+}
+
+.world-map {
+	height: 100%;
+	overflow: hidden;
+	padding: 8px 0;
+	width: 100%;
+	@include breakpoint(small, 'max') {
+	    height: 220px;
+    }
+}
+
+#parts {
+	height: 100%;
+	overflow: hidden;
+	.mapa-area {
+		background: transparent url('images/mapa/maps.svg') no-repeat;
+		background-size: contain;
+		height: 100%;
+		transition: all .4s ease-in-out;
+		width: 100%;
+	}
+	&.active {
+		&.africa--zoom {
+			.mapa-area {
+				background: transparent url('images/mapa/africa.png') no-repeat;
+				background-size: contain;
+				transform: scale(2) translate(-15px, -75px);
+				@include breakpoint(small, 'max') {
+					transform: scale(2) translate(0, -20px);
+				}
+			}
+		}
+		&.america-do-norte--zoom {
+			.mapa-area {
+				background: transparent url('images/mapa/america-do-norte.png') no-repeat;
+				background-size: contain;
+				transform: scale(1.5) translate(195px, 85px);
+				@include breakpoint(small, 'max') {
+					transform: scale(2) translate(100px, 50px);
+				}
+			}
+		}
+		&.america-do-sul--zoom {
+			.mapa-area {
+				background: transparent url('images/mapa/america-do-sul.png') no-repeat;
+				background-size: contain;
+				transform: scale(2) translate(170px, -130px);
+				@include breakpoint(small, 'max') {
+					transform: scale(2) translate(70px, -50px);
+				}
+			}
+		}
+
+		&.asia--zoom {
+			.mapa-area {
+				background: transparent url('images/mapa/asia.png') no-repeat;
+				background-size: contain;
+				transform: scale(1.5) translate(-140px, 60px);
+				@include breakpoint(small, 'max') {
+					transform: scale(1) translate(-70px, 35px);
+				}
+			}
+		}
+
+		&.europa--zoom {
+			.mapa-area {
+				background: transparent url('images/mapa/europa.png') no-repeat;
+				background-size: contain;
+				transform: scale(2) translate(-20px, 80px);
+				@include breakpoint(small, 'max') {
+					transform: scale(2.5) translate(0, 40px);
+				}
+			}
+		}
+
+		&.oceania--zoom {
+			.mapa-area {
+				background: transparent url('images/mapa/oceania.png') no-repeat;
+				background-size: contain;
+				transform: scale(2) translate(-240px, -120px);
+				@include breakpoint(small, 'max') {
+					transform: scale(3) translate(-140px, -50px);
+				}
+			}
+		}
+	}
+}
+
+
+.map__item {
+	@include font-size(24px);
+	background: $color-three;
+	color: #fff;
+	cursor: pointer;
+	font-family: $proximanova-bold;
+	line-height: normal;
+	list-style: none;
+	margin: 5px;
+	padding: 21px 10px;
+	position: relative;
+	z-index: 10;
+	@include breakpoint(small, 'max') {
+		padding: 10px;
+	}
+	&:after {
+		color: #fff;
+		content: '+';
+		font-size: 42px;
+		font-weight: 100;
+		position: absolute;
+		right: 16px;
+		top: 10px;
+		transition: transform .4s ease-in-out;
+		@include breakpoint(small, 'max') {
+			top: 0;
+		}
+	}
+	&.active {
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+
+	&.inner-item {
+		&:after {
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.map__list-item {
+	transform-style: preserve-3d;
+	transition: transform 1s;
+	&.flipped {
+		transform: rotateY( 180deg );
+	}
+}
+
+.map__list {
+	//height: 100%;
+	margin: 0;
+	// max-height: 475px;
+	// overflow-y: auto;
+	max-width: 375px;
+	padding: 0;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+	&.flipped {
+		transform: rotateY( 180deg );
+	}
+}
+
+.back,
+.front {
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.map-dropdown {
+	//display: none;
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	transition: transform, visibility .4s ease-in-out;
+	visibility: hidden;
+	width: 100%;
+	z-index: 5;
+	&.back {
+		transform: rotateY( -180deg );
+	}
+	&.active {
+		//display: block;
+		visibility: visible;
+	}
+
+}
+
+.map-dropdown--select {
+	@include font-size(16px);
+	background: $color-four;
+	color: $color-one;
+	height: 100%;
+	line-height: 20px;
+	margin: 0 5px;
+	max-height: 360px;
+	overflow: auto;
+	padding: 10px;
+}
+
+.map-dropdown--select::-webkit-scrollbar {
+	box-sizing: border-box;
+	display: block;
+	width: 34px;
+}
+
+.map-dropdown--select::-webkit-scrollbar-track {
+	background: transparent;
+	display: block;
+	margin: 10px auto;
+}
+
+.map-dropdown--select::-webkit-scrollbar-thumb {
+	background: #2e3f73;
+	border-radius: 4px;
+}
+
+.map-dropdown--select::-webkit-scrollbar-button {
+	background: url('images/arrow.png') no-repeat;
+}
+
+.map-dropdown--select::-webkit-scrollbar-button:end {
+	background: url('images/arrow-down.png') no-repeat;
+}
+
+.map-dropdown--select::-webkit-scrollbar:horizontal {
+	display: none;
+}

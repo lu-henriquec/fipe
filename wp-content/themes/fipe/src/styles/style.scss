@@ -1,0 +1,86 @@
+@charset 'UTF-8';
+
+/*! =================================================
+	* Theme Name: Layout - Mondial
+	* Description: CSS desenvolvido para Mondial.
+	* Author: Lucas Henrique
+	* Empresa: Jüssi
+	* Author URI: http://www.jussi.com.br/
+	* Version: 1.0
+	=================================================
+*/
+
+// ===============================================================
+/* @IMPORTS */
+// ===============================================================
+
+@import 'helpers/variables';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+
+@import 'base/fonts';
+@import 'base/main';
+
+//=============================
+//=            JUSSI          =
+//=============================
+
+
+
+@import 'base/type';
+
+//FLEXBOX GRID
+@import 'components/grid';
+
+//Slick Slide
+@import 'components/slick.scss';
+
+// Utility helpers
+@import 'helpers/helpers';
+// @import 'helpers/normalize';
+
+// Base styles
+@import 'base/selection';
+
+// Component styles Common
+@import 'components/container';
+
+// Cor das categorias
+@import 'helpers/category-color';
+
+// Formularios
+@import 'base/forms';
+@import 'base/social';
+
+// Site components
+@import 'components/header';
+@import 'components/footer';
+@import 'components/breadcrumb';
+@import 'components/pagination';
+@import 'components/author';
+@import 'components/comments';
+@import 'components/motor';
+@import 'components/404';
+@import 'components/mapa';
+@import 'components/modal';
+@import 'components/banner';
+@import 'components/banner-ads';
+@import 'components/post-card';
+@import 'components/post';
+@import 'components/category';
+@import 'components/list-posts';
+@import 'components/country';
+// @import 'components/video-full';
+// @import 'components/diferenciais';
+// @import 'components/novidades';
+// @import 'components/aplicativos';
+// @import 'components/caracteristicas';
+// @import 'components/beneficios';
+// @import 'components/bandeiras';
+// @import 'components/produtos';
+// @import 'components/contato';
+// @import 'components/modal';
+
+
+/*=====  End of JUSSI  ======*/
+

@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+
+.footer {
+	background-color: #303332;
+	color: $color-four;
+	font-family: $proximanova-light;
+	padding: 50px 0;
+	@include breakpoint(small, 'max') {
+			padding: 50px 10px;
+		}
+	.menu-item {
+		@include font-size(16px);
+		float: none;
+		font-family: $proximanova-light;
+		text-align: left;
+		text-transform: none;
+		@include breakpoint(small, 'max') {
+			@include font-size(14px);
+		}
+		a {
+			color: $color-four;
+			padding: 5px 0;
+		}
+	}
+}
+
+.footer-title {
+	@include font-size(24px);
+	font-family: $proximanova-bold;
+	margin-bottom: 15px;
+	span {
+		color: $color-three;
+	}
+}
+
+.left-col {
+	@include breakpoint(medium, 'min') {
+		padding: 0 50px;
+	}
+}
+
+.right-col {
+	@include breakpoint(medium, 'min') {
+    	margin: 0 auto;
+    	max-width: 130px;
+    	width: 100%;
+	}
+}
+
+.menu {
+	@include breakpoint(small, 'max') {
+	    padding-left: 10px;
+    }
+}
+
+.center-col {
+	@include breakpoint(small, 'max') {
+	    padding-left: 20px;
+    }
+}

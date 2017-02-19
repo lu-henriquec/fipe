@@ -1,0 +1,60 @@
+@charset 'UTF-8';
+
+.banner {
+	color: $color-four;
+	font-family: $proximanova-light;
+	position: relative;
+	@include breakpoint(small, 'max') {
+		height: 375px;
+		.img {
+			height: 375px;
+			max-width: 100%;
+			position: relative;
+		}
+	}
+}
+
+.img-responsive {
+	@include breakpoint(small, 'max') {
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		height: 100%;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+	}
+}
+
+.banner-infos {
+	bottom: 75px;
+	max-width: 440px;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	@include breakpoint(small, 'max') {
+		bottom: 40px;
+	}
+}
+
+.info-destaque {
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+.info-box {
+	background-color: $color-one;
+	// max-height: 145px;
+	overflow: hidden;
+	padding: 30px 35px 30px 30px;
+	@include breakpoint(small, 'max') {
+		padding: 10px;
+	}
+}
+
+.slide-home {
+	@include breakpoint(small, 'max') {
+		margin-bottom: 20px;
+	}	
+}

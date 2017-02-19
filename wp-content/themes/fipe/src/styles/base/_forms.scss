@@ -1,0 +1,137 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  FORMULARIOS
+//------------------------------------
+
+form {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	& * {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+	input,
+	textarea {
+		color: $color-one;
+		font-family: $proximanova-light;
+		padding: 10px;
+		&:focus {
+			outline: none;
+		}
+		@include breakpoint(small, 'max') {
+			width: 100%;
+		}
+	}
+	textarea {
+		resize: none;
+	}
+}
+
+.form-box {
+	background-color: $color-five;
+	padding: 50px 200px;
+	@include breakpoint(small, 'max') {
+		padding: 20px 10px;
+	}
+	input {
+		&[type='submit'] {
+			@include font-size(16px);
+			background-color: $color-three;
+			color: $color-four;
+			cursor: pointer;
+			font-family: $proximanova-bold;
+			width: 140px;
+		}
+	}
+
+		//Hacks for placeholder color "textarea"
+
+	textarea::-webkit-input-placeholder,
+	input::-webkit-input-placeholder { // WebKit, Blink, Edge
+		color: $color-one;
+	}
+}
+
+.form-title {
+	@include font-size(24px);
+	color: $color-one;
+	font-family: $proximanova-bold;
+	margin-bottom: 30px;
+	span {
+		color: $color-two;
+	}
+	@include breakpoint(small, 'max') {
+		@include font-size(20px);
+	}
+}
+
+.form-newsletter {
+	margin: 0 auto;
+	max-width: 780px;
+	width: 100%;
+	p {
+		display: inline-block;
+		padding-right: 20px;
+		&:last-child {
+			padding-right: 0;
+		}
+		@include breakpoint(small, 'max') {
+			padding: 0 0 20px;
+			width: 100%;
+		}
+	}
+	input[type='text'],
+	input[type='email'] {
+		border: 1px solid;
+	}
+}
+
+.row-form {
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+
+.form-contact {
+	input,
+	textarea {
+		width: 100%;
+	}
+	.form-title {
+		margin-bottom: 20px;
+	}
+	.row {
+		padding: 5px 0;
+		@include breakpoint(small, 'max') {
+			&.first-row {
+				input {
+					margin-top: 10px;
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+
+.form-description {
+	@include font-size(16px);
+	font-family: $proximanova-light;
+	margin-bottom: 20px;
+}
+
+.input-search {
+	@include font-size(12px);
+	background-color: #154f76;
+	color: $color-five;
+	float: left;	
+	width: 91%;
+}
+
+.btn-search {
+	background: $color-three url('images/icon-search.png') center center no-repeat;
+	color: $color-one;
+	cursor: pointer;
+	padding: 17px;
+}

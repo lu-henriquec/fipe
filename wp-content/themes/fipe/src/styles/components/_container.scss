@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  CONTAINER
+//------------------------------------
+
+.container {
+	@include responsive('font-size', 12px,
+		(
+			'small'  : 13px,
+			'medium' : 14px,
+			'large'  : 16px
+		)
+	);
+	margin: 0 auto;
+	max-width: 1180px;
+	position: relative;
+	width: 100%;
+}

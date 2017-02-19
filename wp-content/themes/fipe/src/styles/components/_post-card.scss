@@ -1,0 +1,93 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  POSTS CARD
+//------------------------------------
+
+.card {
+	color: $color-four;
+	float: left;
+	font-family: $proximanova-light;	
+	overflow: hidden;
+	padding: 10px 5px 0;
+	width: 100%;
+	.content {
+		height: 300px;
+		overflow: inherit;
+		position: relative;
+		@include breakpoint(small, 'max') {
+			height: 230px;
+		}
+	}
+	.card-infos {
+		-webkit-transition: bottom .7s ease;
+		bottom: -120px;
+		padding: 30px 30px 0;
+		position: absolute;
+		transition: bottom .7s ease;
+		width: 100%;
+		@include breakpoint(small, 'max') {
+			bottom: 0;
+		}
+	}
+	.info-category {
+		margin-bottom: 15px;
+		padding: 0;
+	}
+	.card-img {
+		-ms-transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		height: 100%;
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+	}
+	&:hover {
+		.card-infos {
+			bottom: 0;
+		}
+	}
+	@include breakpoint(small, 'max') {
+		padding: 10px 0 0;
+	}
+}
+
+.card-small {
+	max-width: 33.3%;
+}
+
+.card-medium {
+	max-width: 50%;
+}
+
+.card-large {
+	max-width: 66.6%;
+	// .card-img {
+	// 	width: 100%;
+	// }
+}
+
+.card-small,
+.card-medium,
+.card-large {
+	@include breakpoint(small, 'max') {
+		max-width: 100%;
+	}
+}
+
+.title-call {
+	@include font-size(24px);
+	border-bottom: 3px solid $color-one;
+	color: $color-two;
+	font-family: $proximanova-bold;
+	margin: 0 5px 10px;
+	padding-bottom: 5px;
+	.title-call_span {
+		color: $color-one;
+	}
+	@include breakpoint(small, 'max') {
+		margin: 0 0 10px;
+	}
+}

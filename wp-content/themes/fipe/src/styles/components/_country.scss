@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  TAXONOMY STYLE
+//------------------------------------
+
+.pais-content {
+	background-color: $color-two;
+	color: $color-four;
+	padding: 20px;
+	.img {
+		max-width: 440px;
+		@include breakpoint (small, 'max') {
+			img { height: 175px; }
+		}
+	}
+	.content-infos {
+		max-width: 700px;
+		@include breakpoint (small, 'max') {
+			padding: 0;
+		}
+	}
+}
+
+.pais-info {
+	strong {
+		font-family: $proximanova-bold;
+	}
+}
+
+.pais-name {
+	color: $color-three;
+	font-family: $proximanova-bold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.pais-description {
+	@include breakpoint (small, 'min') {
+		margin-top: 20px;
+	}
+}
+
+.posts-looping {
+	margin-top: 20px;
+}

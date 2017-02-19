@@ -1,0 +1,121 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  CATEGORY COLORS HELPER
+//------------------------------------
+
+.info-category {
+	&[class*='planeje-sua-viagem'] {
+		background-color: $color-planeje;
+	}
+	&[class*='seguranca'] {
+		background-color: $color-seguranca;
+	}
+	&[class*='gastronomia'] {
+		background-color: $color-gastronomia;
+	}
+	&[class*='saude'] {
+		background-color: $color-saude;
+	}
+	&[class*='destinos'] {
+		background-color: $color-destinos;
+	}
+}
+
+.header {
+	.menu-item {
+		@include breakpoint(small, 'min') {
+			&[class*='planeje-sua-viagem'] {
+				&:hover {
+					background-color: $color-planeje;
+				}
+			}
+			&[class*='seguranca'] {
+				&:hover {
+					background-color: $color-seguranca;
+				}
+			}
+			&[class*='gastronomia'] {
+				&:hover {
+					background-color: $color-gastronomia;
+				}
+			}
+			&[class*='saude'] {
+				&:hover {
+					background-color: $color-saude;
+				}
+			}
+			&[class*='destinos'] {
+				&:hover {
+					background-color: $color-destinos;
+				}
+			}
+			&[class*='contato'] {
+				&:hover {
+					background-color: $color-contato;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	.menu-item {
+		&[class*='planeje-sua-viagem'] {
+			color: $color-planeje;
+		}
+		&[class*='seguranca'] {
+			color: $color-seguranca;
+		}
+		&[class*='gastronomia'] {
+			color: $color-gastronomia;
+		}
+		&[class*='saude'] {
+			color: $color-saude;
+		}
+		&[class*='destinos'] {
+			color: $color-destinos;
+		}
+		&.default-item {
+			color: $color-two;
+		}
+	}
+}
+
+.card {
+	.card-infos {
+		&[class*='planeje-sua-viagem'] {
+			@include background-opacity($color-planeje);
+		}
+		&[class*='seguranca'] {
+			@include background-opacity($color-seguranca);
+		}
+		&[class*='gastronomia'] {
+			@include background-opacity($color-gastronomia);
+		}
+		&[class*='saude'] {
+			@include background-opacity($color-saude);
+		}
+		&[class*='destinos'] {
+			@include background-opacity($color-destinos);
+		}
+	}
+}
+
+.page-title {
+	&[class*='planeje-sua-viagem'] {
+		color: $color-planeje;
+	}
+	&[class*='seguranca'] {
+		color: $color-seguranca;
+	}
+	&[class*='gastronomia'] {
+		color: $color-gastronomia;
+	}
+	&[class*='saude'] {
+		color: $color-saude;
+	}
+	&[class*='destinos'] {
+		color: $color-destinos;
+	}
+}

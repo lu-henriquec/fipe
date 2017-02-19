@@ -1,0 +1,6 @@
+@charset 'UTF-8';
+
+@mixin background-opacity($color, $opacity: .6) {
+    //background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}

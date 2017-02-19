@@ -1,0 +1,83 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  MODAL
+//------------------------------------
+
+
+.themodal-overlay {
+    background: rgba(0, 0, 0, .8);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    zoom: 1;
+}
+
+/* fix for iPad glitches */
+// .themodal-overlay > * {
+//     -webkit-transform: translateZ(0px);
+// }
+
+.modal {
+    background-color: $color-four;
+    bottom: inherit;
+    height: 100%;
+    left: 50%;
+    max-height: 762px;
+    max-width: 1034px;
+    overflow: hidden;
+    padding: 50px 20px 50px 65px;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    @include breakpoint(small, 'max') {
+        padding: 10px;
+    }
+}
+
+.modal__conteudo {
+    height: 90%;
+    margin-bottom: 40px;
+    overflow-y: scroll;
+    padding-right: 60px;
+    @include breakpoint(small, 'max') {
+        padding-right: 15px;
+    }
+}
+
+.modal__conteudo-title {
+    @include font-size(20px);
+    font-family: $proximanova-bold;
+}
+
+.modal__conteudo-text {
+    @include font-size(16px);
+    @include breakpoint(small, 'max') {
+        @include font-size(14px);
+    }
+}
+
+.modal__conteudo::-webkit-scrollbar {
+    display: block;
+    width: 15px;
+}
+
+.modal__conteudo::-webkit-scrollbar-track {
+    background: #dbdbdb;
+    border-radius: 10px;
+    display: block;
+    padding: 2px;
+    //margin: 10px auto;
+}
+
+.modal__conteudo::-webkit-scrollbar-thumb {
+    background: #646464;
+    border-radius: 10px;
+}

@@ -1,0 +1,51 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  AUTHOR STYLE
+//------------------------------------
+
+.author {
+	@include font-size(16px);
+	border-top: 3px solid $color-one;
+	padding: 30px 0 60px;
+	@include breakpoint(small, 'max') {
+		padding: 30px 10px;
+	}
+}
+
+.thumb-author,
+.info-author {
+	display: inline-block;
+}
+
+.thumb-author {
+	width: 20%;
+	@include breakpoint(small, 'max') {
+		width: 30%;
+		.avatar {
+			height: 90px;
+			width: 90px;
+		}
+	}
+}
+
+.info-author {
+	width: 79%;
+	@include breakpoint(small, 'max') {
+	    height: 90px;
+	    width: 68%;
+    }
+}
+
+.name-author {
+	font-family: $proximanova-bold;
+	padding-bottom: 20px;
+}
+
+.description-author {
+	font-family: $proximanova-light;
+	@include breakpoint(small, 'max') {
+		height: 55px;
+		overflow: hidden;
+	}
+}

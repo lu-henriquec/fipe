@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  404 PAGE
+//------------------------------------
+
+.not-found-row {
+	margin-bottom: 60px;
+	@include breakpoint (small, 'max') {
+		margin: 0 0 20px;
+	}
+	.title-call {
+		border: none;
+	}
+}
+
+.not-found-text {
+	@include font-size(16px); 
+	font-family: $proximanova-light;
+	margin-bottom: 30px;
+}
+
+.btn {
+	@include font-size(16px); 
+	background-color: $color-three;
+	color: $color-four;
+	font-family: $proximanova-bold;
+	&.btn-default {
+		padding: 10px 45px;
+	}
+}
+
+.not-found-page {
+	.input-search {
+		background-color: $color-five;
+		color: #434343;
+		@include breakpoint (small, 'max') {
+			width: 80%;
+		}
+	}
+}

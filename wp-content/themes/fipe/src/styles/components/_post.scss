@@ -1,0 +1,257 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  POST PAGE STYLE
+//------------------------------------
+
+.top-post-info {
+	color: #ffffff;
+	max-height: 400px;
+	position: relative;
+	.info-description {
+		@include font-size(13px);
+		.author {
+			border: none;
+			@include breakpoint(small, 'max') {
+				padding: 0;
+			}
+		}
+	}
+	.date {
+		color: $color-four;
+		font-family: $proximanova-light;
+	}
+}
+
+.top-post-image .banner-infos {
+	bottom: 0;
+	left: 25px;
+	right: inherit;
+	@include breakpoint(small, 'max') {
+		bottom: -94px;
+		left: 0;
+	}
+}
+
+.top-post-image {
+	.img {
+		float: none;
+		max-width: 100%;
+		.img-responsive {
+			max-height: 400px;
+		}
+		@include breakpoint(small, 'max') {
+			height: 275px;
+			position: relative;
+		}
+	}
+	@include breakpoint(small, 'max') {
+		height: 370px;
+		overflow: hidden;
+	}
+}
+
+.conteudo-post {
+	@include font-size(16px);
+	font-family: $proximanova-light;
+	line-height: 22px;
+}
+
+.content-post-row {
+	padding-top: 20px;
+}
+
+.sidebar-post-col {
+	margin-top: 30px;
+	.title-call {
+		margin: 20px 0 15px;
+	}
+	@include breakpoint(small, 'min') {
+		padding-left: 80px;
+	}
+	.widget_text {
+		text-align: center;
+		@include breakpoint(small, 'max') {
+			display: none;
+		}
+	}
+}
+
+.the-content {
+	padding: 20px 0;
+	@include breakpoint(small, 'max') {
+		padding: 20px 10px;
+	}
+
+	h1, 
+	h2,
+	h3,
+	h4,
+	h5,
+	p {
+		line-height: inherit;
+		margin: inherit;
+		padding: inherit;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		line-height: 115%;
+	}
+
+	/* =WordPress Core
+	-------------------------------------------------------------- */
+	.alignnone {
+		margin: 5px 20px 20px 0;
+	}
+
+	.aligncenter,
+	div.aligncenter {
+		display: block;
+		margin: 5px auto 5px auto;
+	}
+
+	img {
+		@include breakpoint(small, 'max') {
+			height: auto;
+			width: 100%;
+		}
+	}
+
+	.alignright {
+		float: right;
+		margin: 5px 0 20px 20px;
+	}
+
+	.alignleft {
+		float: left;
+		margin: 5px 20px 20px 0;
+	}
+
+	a img.alignright {
+		float: right;
+		margin: 5px 0 20px 20px;
+	}
+
+	a img.alignnone {
+		margin: 5px 20px 20px 0;
+	}
+
+	a img.alignleft {
+		float: left;
+		margin: 5px 20px 20px 0;
+	}
+
+	a img.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.wp-caption {
+		background: #fff;
+		border: 1px solid #f0f0f0;
+		max-width: 96%; /* Image does not overflow the content area */
+		padding: 5px 3px 10px;
+		text-align: center;
+	}
+
+	.wp-caption.alignnone {
+		margin: 5px 20px 20px 0;
+	}
+
+	.wp-caption.alignleft {
+		margin: 5px 20px 20px 0;
+	}
+
+	.wp-caption.alignright {
+		margin: 5px 0 20px 20px;
+	}
+
+	.wp-caption img {
+		border: 0 none;
+		height: auto;
+		margin: 0;
+		max-width: 98.5%;
+		padding: 0;
+		width: auto;
+	}
+
+	.wp-caption p.wp-caption-text {
+		font-size: 11px;
+		line-height: 17px;
+		margin: 0;
+		padding: 0 4px 5px;
+	}
+
+	/* Text meant only for screen readers. */
+	.screen-reader-text {
+		clip: rect(1px, 1px, 1px, 1px);
+		height: 1px;
+		overflow: hidden;
+		position: absolute !important;
+		white-space: nowrap;
+		width: 1px;
+	}
+
+	.screen-reader-text:focus {
+		background-color: #f1f1f1;
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+		clip: auto!important;
+		color: #21759b;
+		display: block;
+		//font-size: 14px;
+		font-size: 0.875rem;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+
+}
+
+.widget-list-item {
+	margin-bottom: 10px;
+	.info-title,
+	.content-text {
+		@include font-size(14px);
+	}
+	.info-title {
+		margin-bottom: 3px;
+	}
+	.date {
+		margin-bottom: 5px;
+	}
+	.content-infos,
+	.img {
+		display: inline-block;
+		float: none;
+	}
+	.img {
+		width: auto;
+	}
+	.content-infos {
+		max-height: 76px;
+		overflow: hidden;
+		padding: 0;
+		width: 226px;
+		@include breakpoint(small, 'max') {
+			max-width: 75%;
+			width: 100%;
+		}
+	}
+	&.no-image {
+		.content-infos {
+			width: 100%;
+		}
+	}
+}
