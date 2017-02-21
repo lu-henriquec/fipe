@@ -15,8 +15,8 @@ form {
 	}
 	input,
 	textarea {
-		color: $color-one;
-		font-family: $proximanova-light;
+		color: $color-four;
+		font-family: $bebas_neueregular;
 		padding: 10px;
 		&:focus {
 			outline: none;
@@ -31,19 +31,21 @@ form {
 }
 
 .form-box {
-	background-color: $color-five;
-	padding: 50px 200px;
+	padding: 20px 0;
 	@include breakpoint(small, 'max') {
 		padding: 20px 10px;
 	}
 	input {
 		&[type='submit'] {
-			@include font-size(16px);
-			background-color: $color-three;
-			color: $color-four;
+			@include font-size(20px);
+			background-color: transparent;
+			border: 2px solid #3c3c3c;
+			color: #3c3c3c;
 			cursor: pointer;
-			font-family: $proximanova-bold;
-			width: 140px;
+			display: block;
+			font-family: $bebas_neueregular;
+			margin: 0 auto;
+			width: 67px;
 		}
 	}
 
@@ -51,7 +53,8 @@ form {
 
 	textarea::-webkit-input-placeholder,
 	input::-webkit-input-placeholder { // WebKit, Blink, Edge
-		color: $color-one;
+		color: $color-four;
+		text-transform: none;
 	}
 }
 
@@ -69,8 +72,7 @@ form {
 }
 
 .form-newsletter {
-	margin: 0 auto;
-	max-width: 780px;
+	max-width: 270px;
 	width: 100%;
 	p {
 		display: inline-block;
@@ -85,7 +87,11 @@ form {
 	}
 	input[type='text'],
 	input[type='email'] {
+		@include font-size(14px);
+		background-color: transparent;
 		border: 1px solid;
+		margin-bottom: 15px;
+		text-transform: none;
 	}
 }
 
@@ -122,16 +128,25 @@ form {
 }
 
 .input-search {
-	@include font-size(12px);
-	background-color: #154f76;
-	color: $color-five;
-	float: left;	
-	width: 91%;
+	@include font-size(22px);
+	background: #ebf0f4 url('images/ico/buscar-ico.png') 15px center no-repeat;
+	border-radius: 20px;
+	color: #53b3f7;
+	font-family: $bebas_neueregular;
+	padding-left: 55px;
+	width: 100%;
 }
 
-.btn-search {
-	background: $color-three url('images/icon-search.png') center center no-repeat;
-	color: $color-one;
-	cursor: pointer;
-	padding: 17px;
+.form-search {
+	margin-left: 45px;
+	input::-webkit-input-placeholder { // WebKit, Blink, Edge
+		color: #53b3f7;
+	}
 }
+
+// .btn-search {
+// 	background: $color-three url('images/icon-search.png') center center no-repeat;
+// 	color: $color-one;
+// 	cursor: pointer;
+// 	padding: 17px;
+// }

@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-	<div class="container">
+	<div class="container-full">
 
 		<!-- Banner Home -->
 		<div class="row no-gutter">
@@ -22,8 +22,8 @@
 					);
 					$query = new WP_Query($args); // exclude category
 					while($query->have_posts()) : $query->the_post();
-					
-						get_template_part( 'templates/banner' );	
+
+						get_template_part( 'templates/banner' );
 
 					endwhile; ?>
 					<!-- LOOP WP Query -->
@@ -31,115 +31,41 @@
 			</div>
 		</div>
 		<!-- Banner Home -->
-		
-		<!-- banner ads -->
-		<div class="row no-gutter ads center-xs">
-			<?php get_template_part( 'templates/row' ); ?>
-		</div>
-		<!-- banner ads -->
-		
-		<!-- últimos Posts -->
-		<div class="row no-gutter latest-posts">
-			<div class="col-xs-12">
-				<p class="title-call">Últimos <span class="title-call_span">posts</span></p>
-			</div>
-			<div class="col-xs-12">
-				<!-- LOOP WP Query -->
-				<?php
-				$args = array(
-					'orderby' => array( 'date' => 'DESC' ),
-					'posts_per_page' => 7
-				);
-				$query = new WP_Query($args); // exclude category
-				$count = 0;
-				while($query->have_posts()) : $query->the_post();
-					//var_dump($count);
-					$count++;
-					 if ($count >= 3 && $count <= 5) { ?>
-    					<article id="post-<?php the_ID(); ?>" <?php post_class('card card-small'); ?>>
-    						<?php 
-    							// Últimos Posts
-								get_template_part( 'templates/latest-posts' );
-								// Últimos Posts
-    						?>
-    					</article>
- 					<?php } else { ?>
-						<article id="post-<?php the_ID(); ?>" <?php post_class('card card-medium'); ?>>
-    						<?php 
-    							// Últimos Posts
-								get_template_part( 'templates/latest-posts' );
-								// Últimos Posts
-    						?>
-    					</article>
- 					<?php }
 
-				endwhile; ?>
-				<!-- LOOP WP Query -->
+		<!-- cursos -->
+		<div class="cursos-row">
+			<div class="row no-gutter center-xs">
+				<div class="col-xs-12">
+					<h2 class="cursos-title">conheça os cursos fipe</h2>
+				</div>
 			</div>
+			<?php get_template_part( 'templates/cursos-list' ); ?>
 		</div>
-		<!-- últimos Posts -->
+		<!-- cursos -->
 
-		<!-- Formulário -->
-		<div class="row row-form">
-			<div class="col-xs-12">
-				<?php get_template_part( 'templates/form' ); ?>
-			</div>
-		</div>
-		<!-- Formulário -->
+	</div>
 
-		<!-- MAPA -->
-		<div class="row no-gutter">
-			<div class="col-xs-12 mapa">
-				<p class="title-call">Filtre <span class="title-call_span">por país</span></p>
-				<?php get_template_part( 'templates/mapa' ); ?>
-			</div>
-		</div>
-		<!-- MAPA -->
-		
-		<!-- Posts mais lidos -->
-		<div class="row no-gutter popular-posts">
-			<div class="col-xs-12">
-				<p class="title-call">Posts <span class="title-call_span">mais lidos</span></p>
-			</div>
-			<div class="col-xs-12">
-				<!-- LOOP get posts more popular -->
-				<?php
-				$posts = wp_most_popular_get_popular( array( 
-					'limit' => 5,
-					'post_type' => 'post',
-					'range' => 'all_time'
-					) 
-				);
-				$count = 0;
-				if ( count( $posts ) > 0 ): 
-					foreach ( $posts as $post ):
-						setup_postdata( $post );
-						$count++;
-					 	if ($count <= 1) { ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class('card card-large'); ?>>
-								<?php
-								// Últimos Posts
-								get_template_part( 'templates/popular-posts' );
-								// Últimos Posts
-								?>
-							</article>
-						<?php } else { ?>
-							<article id="post-<?php the_ID(); ?>" <?php post_class('card card-small'); ?>>
-								<?php
-								// Últimos Posts
-								get_template_part( 'templates/popular-posts' );
-								// Últimos Posts
-								?>
-							</article>
-						<?php }
+	<div class="container">
 
-					endforeach;
-				endif;
-				?>
-				<!-- LOOP get posts more popular -->
+		<!-- Conteudo -->
+		<div class="home-conteudo">
+			<div class="row start-xs">
+				<div class="col-xs-12 col-md-6">
+					<h2 class="title-conteudo">
+						<?php the_field('titulo', 2);?>
+					</h2>
+					<p class="text-conteudo">
+						<?php the_field('texto_principal', 2);?>
+					</p>
+				</div>
+				<div class="col-xs-12 col-md-6 text-sec">
+				 	<p class="text-conteudo">
+						<?php the_field('texto_secundario', 2);?>
+					</p>
+				</div>
 			</div>
 		</div>
-		<!-- Posts mais lidos -->
+		<!-- Conteudo -->
 
 	</div>
 

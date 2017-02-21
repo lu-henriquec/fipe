@@ -30,7 +30,7 @@
 .banner-infos {
 	bottom: 75px;
 	max-width: 440px;
-	position: absolute;
+	//position: absolute;
 	right: 0;
 	width: 100%;
 	@include breakpoint(small, 'max') {
@@ -56,5 +56,5 @@
 .slide-home {
 	@include breakpoint(small, 'max') {
 		margin-bottom: 20px;
-	}	
+	}
 }

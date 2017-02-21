@@ -1,60 +1,89 @@
 @charset 'UTF-8';
 
 .footer {
-	background-color: #303332;
+	background-color: #93a4b3;
 	color: $color-four;
-	font-family: $proximanova-light;
+	font-family: $bebas_neueregular;
 	padding: 50px 0;
 	@include breakpoint(small, 'max') {
-			padding: 50px 10px;
-		}
+		padding: 50px 10px;
+	}
+	.menu {
+		padding: 0;
+	}
 	.menu-item {
-		@include font-size(16px);
+		@include font-size(14px);
+		border: 0;
+		color: $color-four;
 		float: none;
-		font-family: $proximanova-light;
+		font-family: Arial;
+		font-weight: 400;
+		list-style: none;
+		margin: 20px 0;
 		text-align: left;
 		text-transform: none;
-		@include breakpoint(small, 'max') {
-			@include font-size(14px);
-		}
+		transition: none;
 		a {
-			color: $color-four;
-			padding: 5px 0;
+			padding: 0;
+		}
+		&:hover {
+			background-color: transparent;
+			color: #3c3c3c;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+		&:before {
+			display: none;
 		}
 	}
+	.menu-links {
+		a {
+			padding-left: 15px;
+			position: relative;
+			&:before {
+				background: url('images/ico/ico-external-link-light.png') left top no-repeat;
+				content: '';
+				display: inline-block;
+				height: 12px;
+				left: 0;
+				overflow: hidden;
+				position: absolute;
+				top: 2px;
+				vertical-align: middle;
+				width: 12px;
+			}
+			&:hover {
+				&:before {
+					background-position: left bottom;
+				}
+			}
+		}
+	}
+}
+
+.bg-border {
+	background: url('images/ico/bg_title_footer.png') left bottom no-repeat;
 }
 
 .footer-title {
 	@include font-size(24px);
-	font-family: $proximanova-bold;
-	margin-bottom: 15px;
-	span {
-		color: $color-three;
+	background: url('images/ico/bg_title_footer.png') left bottom no-repeat;
+	font-family: $bebas_neueregular;
+	font-weight: 400;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+.social-row {
+	margin-top: 20px;
+	ul {
+		padding: 0;
 	}
-}
-
-.left-col {
-	@include breakpoint(medium, 'min') {
-		padding: 0 50px;
+	.social-item {
+		float: left;
+		height: 32px;
+		list-style: none;
+		margin: 0 20px 0 0;
+		width: 32px;
 	}
-}
-
-.right-col {
-	@include breakpoint(medium, 'min') {
-    	margin: 0 auto;
-    	max-width: 130px;
-    	width: 100%;
-	}
-}
-
-.menu {
-	@include breakpoint(small, 'max') {
-	    padding-left: 10px;
-    }
-}
-
-.center-col {
-	@include breakpoint(small, 'max') {
-	    padding-left: 20px;
-    }
 }

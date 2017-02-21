@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+
+//------------------------------------
+//  HOME STYLE
+//------------------------------------
+
+.home-conteudo {
+	font-family: Helvetica;
+	padding: 30px 0 20px;
+	*[class*="col-"] {
+		padding-left: 30px;
+	}
+}
+
+.title-conteudo {
+	@include font-size(32px);
+	color: #0e6797;
+	margin-bottom: 15px;
+}
+
+.text-conteudo {
+	@include font-size(16px);
+	color: #58595b;
+	font-weight: 400;
+}
+
+.text-sec {
+	margin-top: 50px;
+}

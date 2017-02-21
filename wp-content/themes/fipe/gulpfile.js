@@ -118,7 +118,7 @@ gulp.task('clean', function () {
 gulp.task('serve', ['watch'], function () {
 	browserSync({
 		files: [ '!js/app.min.js', 'js/**/*', '*.css', '**/*.php', '!dist/**/*.map', 'admin/**/*' ],
-		proxy: 'mondialblog',
+		//proxy: 'fipe',
 		open: !$.util.env.no
 	});
 });

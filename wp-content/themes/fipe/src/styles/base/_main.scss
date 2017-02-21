@@ -16,6 +16,7 @@ $line-height-integer: #{$line-height-ratio};
 
 html {
 	overflow-y: scroll;
+	overflow-x: hidden;
 
 	body { opacity: 1 !important; } //prevent vwo flash
 }
@@ -38,10 +39,10 @@ hr {
 }
 
 .site-content {
-	padding: 20px 0;
-	@include breakpoint(small, 'min') {
-		margin-top: 145px;
-	}
+	// padding: 20px 0;
+	// @include breakpoint(small, 'min') {
+	// 	margin-top: 145px;
+	// }
 }
 
 .hide-sm {

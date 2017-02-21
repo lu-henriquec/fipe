@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 
 .pre-header {
-	background-color: $color-one;
+	background-color: $color-four;
 	padding: 13px 0;
 	.form-search {
 		@include breakpoint(small, 'max') {
@@ -35,11 +35,11 @@
 	transition: top 300ms ease-in-out;
 	width: 100%;
 	z-index: 999;
-	@include breakpoint(small, 'min') {
-		left: 0;
-		position: fixed;
-		top: 0;
-	}
+	// @include breakpoint(small, 'min') {
+	// 	left: 0;
+	// 	position: fixed;
+	// 	top: 0;
+	// }
 	&.fixed {
 		top: -60px;
 		.logo {
@@ -50,35 +50,47 @@
 			}
 		}
 	}
+	.social-row {
+		margin-top: 0;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		.social-col {
+			font-size: 2px;
+		}
+		.social-item {
+			display: inline-block;
+			float: none;
+			height: auto;
+			list-style: none;
+			margin: 0;
+			width: auto;
+		}
+	}
 }
 
 .menu-row {
-	background-color: $color-five;
-	min-height: 82px;
+	background-color: $color-four;
+	border-top: 1px solid #d5dfe7;
 	@include breakpoint(small, 'max') {
 		min-height: 60px;
 		position: relative;
 	}
-}
-
-.logo {
-	left: 10px;
-	position: absolute;
-	top: -24px;
-	@include breakpoint(small, 'max') {
-		height: 66px;
-		left: 50%;
-		margin-left: -61px;
-		top: -15px;
-		width: 123px;
-		z-index: 2;
+	nav[class*='menu-principal'] {
+		margin: -1px auto;
+		max-width: 1080px;
+		position: relative;
+	}
+	.container {
+		max-width: 1080px;
 	}
 }
 
 .header-menu {
 	list-style: none;
 	margin: 0;
-	padding: 10px 0;
+	padding: 0;
 	@include breakpoint(small, 'max') {
 	    -webkit-transition: left 300ms ease-in-out;
 		background-color: #f0f0f0;
@@ -111,24 +123,65 @@
 }
 
 .menu-item {
-	@include font-size(12px);
-	color: $color-one;
+	@include font-size(24px);
+	border-color: #d5dfe7;
+	border-style: solid;
+	border-width: 1px 1px 0;
+	color: #92a4b4;
 	float: left;
-	font-family: $proximanova-bold;
-	max-width: 163px;
+	font-family: $bebas_neueregular;
+	margin-left: -1px;
+	max-width: 216px;
+	position: relative;
 	text-align: center;
 	text-transform: uppercase;
-	transition: color, background-color .3s ease-in-out;
+	transition: all .2s ease-in-out;
 	width: 100%;
 	a {
 		display: block;
-		padding: 24px 0;
+		padding: 23px 0 11px;
 		@include breakpoint(small, 'max') {
 			padding: 0;
 		}
 	}
 	&:hover {
+		background-color: $color-one;
 		color: $color-four;
+		cursor: pointer;
+	}
+	&:before {
+		content: '';
+		height: 46px;
+		left: 50%;
+		margin: 0 auto 0 -20px!important;
+		position: absolute;
+		top: -20px;
+		width: 40px;
+	}
+	&.indices {
+		&:before {
+			background: transparent url('images/ico/indices.png') center center no-repeat;
+		}
+	}
+	&.ensino {
+		&:before {
+			background: transparent url('images/ico/ensino.png') center center no-repeat;
+		}
+	}
+	&.projetos {
+		&:before {
+			background: transparent url('images/ico/projetos-e-pesquisas.png') center center no-repeat;
+		}
+	}
+	&.publicacoes {
+		&:before {
+			background: transparent url('images/ico/publicacoes.png') center center no-repeat;
+		}
+	}
+	&.sobre {
+		&:before {
+			background: transparent url('images/ico/sobre-a-fipe.png') center center no-repeat;
+		}
 	}
 }
 
@@ -199,3 +252,57 @@
 		display: none;
 	}
 }
+
+
+.lang-col {
+	border-right: solid 1px #c1cddb;
+	font-size: 0;
+	padding-right: 15px;
+	.lg {
+		background: #becdda;
+		border-radius: 0 26px 26px 0;
+		display: inline-block;
+		height: 26px;
+		margin: 0 auto;
+		top: 0;
+		transition: all .2s ease-in-out;
+		width: 26px;
+		a {
+			@include font-size(16px);
+			color: #fff;
+			display: block;
+			font-family: $bebas_neueregular;
+			text-align: center;
+			text-decoration: none;
+		}
+		&.pt_br {
+			border-radius: 26px 0 0 26px;
+			a {
+				padding: 4px 0 0 3px;
+			}
+		}
+		&.en_us {
+			a {
+				padding: 4px 3px 0 0;
+			}
+		}
+		&.active {
+			background: #92a4b4;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
