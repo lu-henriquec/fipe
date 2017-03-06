@@ -38,16 +38,28 @@
 
 @font-face {
   font-family: 'Bebas Neue';
-  font-weight: normal;
   font-style: normal;
+  font-weight: normal;
   src: url("fonts/BebasNeue.eot"), url("fonts/BebasNeue.eot?#iefix") format("embedded-opentype"), url("fonts/BebasNeue.woff2") format("woff2"), url("fonts/BebasNeue.woff") format("woff"), url("fonts/BebasNeue.ttf") format("truetype"), url("fonts/BebasNeue.svg#BebasNeue") format("svg"); }
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std BdCn';
+  font-style: normal;
+  font-weight: bold;
+  src: url("fonts/HelveticaNeueLTStd-BdCn.eot"), url("fonts/HelveticaNeueLTStd-BdCn.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueLTStd-BdCn.woff2") format("woff2"), url("fonts/HelveticaNeueLTStd-BdCn.woff") format("woff"), url("fonts/HelveticaNeueLTStd-BdCn.ttf") format("truetype"), url("fonts/HelveticaNeueLTStd-BdCn.svg#HelveticaNeueLTStd-BdCn") format("svg"); }
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Cn';
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/HelveticaNeueLTStd-Cn.eot"), url("fonts/HelveticaNeueLTStd-Cn.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeueLTStd-Cn.woff2") format("woff2"), url("fonts/HelveticaNeueLTStd-Cn.woff") format("woff"), url("fonts/HelveticaNeueLTStd-Cn.ttf") format("truetype"), url("fonts/HelveticaNeueLTStd-Cn.svg#HelveticaNeueLTStd-Cn") format("svg"); }
 
 *, *:before, *:after {
   box-sizing: border-box; }
 
 html {
-  overflow-y: scroll;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  overflow-y: scroll; }
   html body {
     opacity: 1 !important; }
 
@@ -840,49 +852,48 @@ form {
   list-style: none;
   margin: 0;
   padding: 0; }
-
-.menu-item {
-  font-size: 24px;
-  font-size: 1.5rem;
-  border-color: #d5dfe7;
-  border-style: solid;
-  border-width: 1px 1px 0;
-  color: #92a4b4;
-  float: left;
-  font-family: "Bebas Neue", "Helvetica Neue", Arial, sans-serif;
-  margin-left: -1px;
-  max-width: 216px;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  width: 100%; }
-  .menu-item a {
-    display: block;
-    padding: 23px 0 11px; }
-  .menu-item:hover {
-    background-color: #33a9f4;
-    color: #ffffff;
-    cursor: pointer; }
-  .menu-item:before {
-    content: '';
-    height: 46px;
-    left: 50%;
-    margin: 0 auto 0 -20px !important;
-    position: absolute;
-    top: -20px;
-    width: 40px; }
-  .menu-item.indices:before {
-    background: transparent url("images/ico/indices.png") center center no-repeat; }
-  .menu-item.ensino:before {
-    background: transparent url("images/ico/ensino.png") center center no-repeat; }
-  .menu-item.projetos:before {
-    background: transparent url("images/ico/projetos-e-pesquisas.png") center center no-repeat; }
-  .menu-item.publicacoes:before {
-    background: transparent url("images/ico/publicacoes.png") center center no-repeat; }
-  .menu-item.sobre:before {
-    background: transparent url("images/ico/sobre-a-fipe.png") center center no-repeat; }
+  .header-menu .menu-item {
+    font-size: 24px;
+    font-size: 1.5rem;
+    border-color: #d5dfe7;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    color: #92a4b4;
+    float: left;
+    font-family: "Bebas Neue", "Helvetica Neue", Arial, sans-serif;
+    margin-left: -1px;
+    max-width: 216px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    width: 100%; }
+    .header-menu .menu-item a {
+      display: block;
+      padding: 23px 0 11px; }
+    .header-menu .menu-item:hover {
+      background-color: #33a9f4;
+      color: #ffffff;
+      cursor: pointer; }
+    .header-menu .menu-item:before {
+      content: '';
+      height: 46px;
+      left: 50%;
+      margin: 0 auto 0 -20px !important;
+      position: absolute;
+      top: -20px;
+      width: 40px; }
+    .header-menu .menu-item.indices:before {
+      background: transparent url("images/ico/indices.png") center center no-repeat; }
+    .header-menu .menu-item.ensino:before {
+      background: transparent url("images/ico/ensino.png") center center no-repeat; }
+    .header-menu .menu-item.projetos:before {
+      background: transparent url("images/ico/projetos-e-pesquisas.png") center center no-repeat; }
+    .header-menu .menu-item.publicacoes:before {
+      background: transparent url("images/ico/publicacoes.png") center center no-repeat; }
+    .header-menu .menu-item.sobre:before {
+      background: transparent url("images/ico/sobre-a-fipe.png") center center no-repeat; }
 
 .menu-open {
   cursor: pointer;
@@ -999,6 +1010,7 @@ form {
     .footer .menu-item:before {
       display: none; }
   .footer .menu-links a {
+    display: block;
     padding-left: 15px;
     position: relative; }
     .footer .menu-links a:before {
@@ -1039,14 +1051,19 @@ form {
     width: 32px; }
 
 .breadcrumbs {
+  border-bottom: 1px solid #acadad;
   list-style: none;
-  padding: 0; }
+  margin: 30px 0 15px 0;
+  padding: 0 0 15px 0; }
   .breadcrumbs li {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 16px;
+    font-size: 1rem;
     display: inline-block;
+    font-family: "Helvetica Neue LT Std Cn", "Helvetica Neue", Arial, sans-serif;
     margin-right: 8px;
     vertical-align: middle; }
+    .breadcrumbs li.separator {
+      color: #0e6797; }
 
 .pagination-row {
   height: 85px; }
@@ -1159,10 +1176,8 @@ form {
   background: #646464;
   border-radius: 10px; }
 
-.banner {
-  color: #ffffff;
-  font-family: "proximanova-light", "Helvetica Neue", Arial, sans-serif;
-  position: relative; }
+.img-responsive {
+  width: 100%; }
 
 .banner-infos {
   bottom: 75px;
@@ -1179,26 +1194,254 @@ form {
   overflow: hidden;
   padding: 30px 35px 30px 30px; }
 
-.cursos-row {
-  background-color: #f6f4f5;
-  padding-bottom: 35px; }
+.top-post-image {
+  height: 270px; }
+  .top-post-image .img-responsive {
+    height: 270px; }
 
-.cursos-title {
-  padding: 30px 0;
+.conteudo-post {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "proximanova-light", "Helvetica Neue", Arial, sans-serif;
+  line-height: 22px; }
+
+.content-post-row {
+  padding: 20px 0; }
+
+.post-image {
+  border: 1px solid #acadad;
+  padding: 8px; }
+  .post-image img {
+    width: 100%; }
+
+.row-post_title {
+  padding: 25px 0; }
+
+.post-title {
+  font-size: 30px;
+  font-size: 1.875rem;
+  color: #0e6797;
+  font-family: "Helvetica Neue LT Std BdCn", "Helvetica Neue", Arial, sans-serif;
   text-transform: uppercase; }
 
-.cursos-listagem {
+.informations_post {
+  border-bottom: 4px solid #acadad;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  position: relative; }
+  .informations_post:before {
+    background-color: #29abdf;
+    border-right: 3px solid #FFFFFF;
+    bottom: -4px;
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    width: 65px; }
+
+.info-post_subtitle {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #515151;
+  font-family: "Helvetica Neue LT Std BdCn", "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase; }
+
+.box-infos {
+  border: 1px solid #acadad;
+  padding: 0 23px; }
+
+.box-infos_list {
   list-style: none;
-  margin: 0;
   padding: 0; }
 
-.curso-item {
-  color: #92a4b2;
-  display: inline-block;
-  padding: 0 20px;
-  text-transform: uppercase; }
-  .curso-item p {
-    margin-top: 10px; }
+.box-infos_item {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #58595b;
+  font-family: "Helvetica Neue LT Std Cn", "Helvetica Neue", Arial, sans-serif;
+  height: 32px;
+  padding: 7px 30px;
+  position: relative; }
+  .box-infos_item span {
+    font-family: "Helvetica Neue LT Std BdCn", "Helvetica Neue", Arial, sans-serif; }
+  .box-infos_item:before {
+    background: transparent url("images/sprite-infos.png") center top no-repeat;
+    content: '';
+    height: 16px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 26px; }
+  .box-infos_item.item-horario:before {
+    background: transparent url("images/sprite-infos.png") center -30px no-repeat; }
+  .box-infos_item.item-vagas:before {
+    background: transparent url("images/sprite-infos.png") center -59px no-repeat; }
+  .box-infos_item.item-carga:before {
+    background: transparent url("images/sprite-infos.png") center -86px no-repeat; }
+  .box-infos_item.item-responsavel:before {
+    background: transparent url("images/sprite-infos.png") center -115px no-repeat; }
+  .box-infos_item.item-local:before {
+    background: transparent url("images/sprite-infos.png") center bottom no-repeat; }
+
+.info-post_text {
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Helvetica Neue LT Std Cn", "Helvetica Neue", Arial, sans-serif;
+  margin-bottom: 10px; }
+
+.post-sub_title {
+  color: #29abdf;
+  font-family: "Helvetica Neue LT Std BdCn", "Helvetica Neue", Arial, sans-serif; }
+
+.post-info_values {
+  font-size: 18px;
+  font-size: 1.125rem;
+  color: #29abdf;
+  font-family: Arial;
+  margin-bottom: 5px; }
+
+.btn-subscribe {
+  font-size: 24px;
+  font-size: 1.5rem;
+  background: #9bcbec;
+  border: 1px solid #1a77b9;
+  color: #FFFFFF;
+  display: block;
+  font-family: "Helvetica Neue LT Std Cn", "Helvetica Neue", Arial, sans-serif;
+  padding: 7px 0;
+  text-align: center; }
+
+.sidebar-post-col {
+  margin-top: 30px; }
+  .sidebar-post-col .title-call {
+    margin: 20px 0 15px; }
+  .sidebar-post-col .widget_text {
+    text-align: center; }
+    .sidebar-post-col .widget_text .btn-subscribe {
+      margin: 0 25px; }
+  .sidebar-post-col .widget {
+    margin-bottom: 20px; }
+
+.the-content {
+  padding: 20px 0;
+  /* =WordPress Core
+	-------------------------------------------------------------- */
+  /* Text meant only for screen readers. */ }
+  .the-content h1,
+  .the-content h2,
+  .the-content h3,
+  .the-content h4,
+  .the-content h5,
+  .the-content p {
+    line-height: inherit;
+    margin: inherit;
+    padding: inherit; }
+  .the-content h1,
+  .the-content h2,
+  .the-content h3,
+  .the-content h4,
+  .the-content h5 {
+    line-height: 115%; }
+  .the-content .alignnone {
+    margin: 5px 20px 20px 0; }
+  .the-content .aligncenter,
+  .the-content div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto; }
+  .the-content .alignright {
+    float: right;
+    margin: 5px 0 20px 20px; }
+  .the-content .alignleft {
+    float: left;
+    margin: 5px 20px 20px 0; }
+  .the-content a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px; }
+  .the-content a img.alignnone {
+    margin: 5px 20px 20px 0; }
+  .the-content a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0; }
+  .the-content a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .the-content .wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center; }
+  .the-content .wp-caption.alignnone {
+    margin: 5px 20px 20px 0; }
+  .the-content .wp-caption.alignleft {
+    margin: 5px 20px 20px 0; }
+  .the-content .wp-caption.alignright {
+    margin: 5px 0 20px 20px; }
+  .the-content .wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto; }
+  .the-content .wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px; }
+  .the-content .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px; }
+  .the-content .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: .875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */ }
+
+.widget-list-item {
+  margin-bottom: 10px; }
+  .widget-list-item .info-title,
+  .widget-list-item .content-text {
+    font-size: 14px;
+    font-size: 0.875rem; }
+  .widget-list-item .info-title {
+    margin-bottom: 3px; }
+  .widget-list-item .date {
+    margin-bottom: 5px; }
+  .widget-list-item .content-infos,
+  .widget-list-item .img {
+    display: inline-block;
+    float: none; }
+  .widget-list-item .img {
+    width: auto; }
+  .widget-list-item .content-infos {
+    max-height: 76px;
+    overflow: hidden;
+    padding: 0;
+    width: 226px; }
+  .widget-list-item.no-image .content-infos {
+    width: 100%; }
 
 .posts-container {
   border: 3px solid #33a9f4;
@@ -1252,7 +1495,7 @@ form {
 .home-conteudo {
   font-family: Helvetica;
   padding: 30px 0 20px; }
-  .home-conteudo *[class*="col-"] {
+  .home-conteudo *[class*='col-'] {
     padding-left: 30px; }
 
 .title-conteudo {
@@ -1269,6 +1512,87 @@ form {
 
 .text-sec {
   margin-top: 50px; }
+
+.cursos-row {
+  background-color: #f6f4f5;
+  padding-bottom: 35px; }
+
+.cursos-title {
+  padding: 30px 0;
+  text-transform: uppercase; }
+
+.cursos-listagem {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.menu-menu-sidebar-container .menu-item {
+  color: #92a4b2;
+  display: inline-block;
+  padding: 50px 20px 0;
+  position: relative;
+  text-transform: uppercase; }
+  .menu-menu-sidebar-container .menu-item:before {
+    content: '';
+    height: 40px;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    width: 100%; }
+  .menu-menu-sidebar-container .menu-item.mba:before {
+    background: transparent url("images/cursos/mba.png") center center no-repeat; }
+  .menu-menu-sidebar-container .menu-item.curta:before {
+    background: transparent url("images/cursos/curta-duracao.png") center center no-repeat; }
+  .menu-menu-sidebar-container .menu-item.ead:before {
+    background: transparent url("images/cursos/ead.png") center center no-repeat; }
+  .menu-menu-sidebar-container .menu-item.capacitacao:before {
+    background: transparent url("images/cursos/capacitacao.png") center center no-repeat; }
+  .menu-menu-sidebar-container .menu-item.preparatorios:before {
+    background: transparent url("images/cursos/preparatorio.png") center center no-repeat; }
+  .menu-menu-sidebar-container .menu-item.contas:before {
+    background: transparent url("images/cursos/contas-publicas.png") center center no-repeat; }
+  .menu-menu-sidebar-container .menu-item.corpo:before {
+    background: transparent url("images/cursos/corpo-docente.png") center center no-repeat; }
+
+.sidebar-post-col .widget_nav_menu {
+  border: 1px solid #1a77b9;
+  padding: 15px; }
+  .sidebar-post-col .widget_nav_menu h4 {
+    font-size: 16px;
+    font-size: 1rem;
+    color: #0e6797;
+    font-family: "Helvetica Neue LT Std BdCn", "Helvetica Neue", Arial, sans-serif;
+    text-align: left;
+    text-transform: uppercase; }
+  .sidebar-post-col .widget_nav_menu .menu {
+    padding: 0; }
+  .sidebar-post-col .widget_nav_menu .menu-item {
+    font-size: 18px;
+    font-size: 1.125rem;
+    border-top: 1px dashed #9ac3e0;
+    display: block;
+    font-family: "Helvetica Neue LT Std BdCn", "Helvetica Neue", Arial, sans-serif;
+    height: 48px;
+    padding: 15px 0 15px 55px;
+    text-align: left; }
+    .sidebar-post-col .widget_nav_menu .menu-item:before {
+      background-size: contain;
+      height: 30px;
+      left: 10px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 35px; }
+    .sidebar-post-col .widget_nav_menu .menu-item:first-child {
+      border: none; }
+
+.curso-item {
+  color: #92a4b2;
+  display: inline-block;
+  padding: 0 20px;
+  text-transform: uppercase; }
+  .curso-item p {
+    margin-top: 10px; }
 
 /*=====  End of JUSSI  ======*/
 
@@ -1418,7 +1742,9 @@ form {
   .menu-open {
     display: none; }
   .search-open {
-    display: none; } }
+    display: none; }
+  .sidebar-post-col {
+    padding: 0 40px; } }
 
 @media (min-width: 992px) {
   .slick-dots {
@@ -1741,6 +2067,8 @@ form {
     z-index: 1; }
   .header-menu.active {
     left: 0; }
+  .header-menu .menu-item a {
+    padding: 0; }
   .header-menu .menu-item {
     border-bottom: 2px solid #b4b4b4;
     float: none;
@@ -1751,8 +2079,6 @@ form {
     color: #33a9f4; }
   .header-menu .menu-item:last-child {
     border: none; }
-  .menu-item a {
-    padding: 0; }
   .footer {
     padding: 50px 10px; }
   .breadcrumbs {
@@ -1768,27 +2094,22 @@ form {
   .modal__conteudo-text {
     font-size: 14px;
     font-size: 0.875rem; }
-  .banner {
-    height: 375px; }
-  .banner .img {
-    height: 375px;
-    max-width: 100%;
-    position: relative; }
-  .img-responsive {
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    height: 100%;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: auto; }
   .banner-infos {
     bottom: 40px; }
   .info-box {
     padding: 10px; }
   .slide-home {
     margin-bottom: 20px; }
+  .sidebar-post-col .widget_text {
+    display: none; }
+  .the-content {
+    padding: 20px 10px; }
+  .the-content img {
+    height: auto;
+    width: 100%; }
+  .widget-list-item .content-infos {
+    max-width: 75%;
+    width: 100%; }
   .content-post .info-title {
     font-size: 14px;
     font-size: 0.875rem;

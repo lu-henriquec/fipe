@@ -42,8 +42,8 @@
 
 @font-face {
 	font-family: 'Bebas Neue';
-	font-weight: normal;
 	font-style: normal;
+	font-weight: normal;
 	src: url('fonts/BebasNeue.eot'),
 		 url('fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
 		 url('fonts/BebasNeue.woff2') format('woff2'),
@@ -52,13 +52,42 @@
 		 url('fonts/BebasNeue.svg#BebasNeue') format('svg');
 }
 
+@font-face {
+	font-family: 'Helvetica Neue LT Std BdCn';
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/HelveticaNeueLTStd-BdCn.eot'),
+		 url('fonts/HelveticaNeueLTStd-BdCn.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/HelveticaNeueLTStd-BdCn.woff2') format('woff2'),
+		 url('fonts/HelveticaNeueLTStd-BdCn.woff') format('woff'),
+		 url('fonts/HelveticaNeueLTStd-BdCn.ttf') format('truetype'),
+		 url('fonts/HelveticaNeueLTStd-BdCn.svg#HelveticaNeueLTStd-BdCn') format('svg');
+}
+
+@font-face {
+	font-family: 'Helvetica Neue LT Std Cn';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/HelveticaNeueLTStd-Cn.eot'),
+		 url('fonts/HelveticaNeueLTStd-Cn.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/HelveticaNeueLTStd-Cn.woff2') format('woff2'),
+		 url('fonts/HelveticaNeueLTStd-Cn.woff') format('woff'),
+		 url('fonts/HelveticaNeueLTStd-Cn.ttf') format('truetype'),
+		 url('fonts/HelveticaNeueLTStd-Cn.svg#HelveticaNeueLTStd-Cn') format('svg');
+}
+
+
 $bebas_neueregular: 'Bebas Neue', 'Helvetica Neue', Arial, sans-serif !default;
+$helvneue-bdcn: 'Helvetica Neue LT Std BdCn', 'Helvetica Neue', Arial, sans-serif !default;
+$helvneue-cn: 'Helvetica Neue LT Std Cn', 'Helvetica Neue', Arial, sans-serif !default;
+
+
 $proximanova-light: 'proximanova-light', 'Helvetica Neue', Arial, sans-serif !default;
 $proximanova-regular: 'proximanova-regular', 'Helvetica Neue', Arial, sans-serif !default;
 $proximanova-bold:  'proximanova-bold', 'Helvetica Neue', Arial, sans-serif !default;
 
 
 // Base font-family
-$base-font-family         : $proximanova-light;
+$base-font-family         : $bebas_neueregular;
 $base-print-font-family   : Georgia, 'Times New Roman', Times, serif !default;
 

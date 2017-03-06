@@ -5,15 +5,21 @@
 //------------------------------------
 
 .breadcrumbs {
+	border-bottom: 1px solid #acadad;
 	list-style: none;
-	padding: 0;
+	margin: 30px 0 15px 0;
+	padding: 0 0 15px 0;
 	@include breakpoint(small, 'max') {
 		padding: 0 10px;
 	}
 	li {
-		@include font-size(14px);
+		@include font-size(16px);
 		display: inline-block;
+		font-family: $helvneue-cn;
 		margin-right: 8px;
 		vertical-align: middle;
+		&.separator {
+			color: #0e6797;
+		}
 	}
 }

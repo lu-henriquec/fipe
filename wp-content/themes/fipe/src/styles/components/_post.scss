@@ -3,51 +3,10 @@
 //------------------------------------
 //  POST PAGE STYLE
 //------------------------------------
-
-.top-post-info {
-	color: #ffffff;
-	max-height: 400px;
-	position: relative;
-	.info-description {
-		@include font-size(13px);
-		.author {
-			border: none;
-			@include breakpoint(small, 'max') {
-				padding: 0;
-			}
-		}
-	}
-	.date {
-		color: $color-four;
-		font-family: $proximanova-light;
-	}
-}
-
-.top-post-image .banner-infos {
-	bottom: 0;
-	left: 25px;
-	right: inherit;
-	@include breakpoint(small, 'max') {
-		bottom: -94px;
-		left: 0;
-	}
-}
-
 .top-post-image {
-	.img {
-		float: none;
-		max-width: 100%;
-		.img-responsive {
-			max-height: 400px;
-		}
-		@include breakpoint(small, 'max') {
-			height: 275px;
-			position: relative;
-		}
-	}
-	@include breakpoint(small, 'max') {
-		height: 370px;
-		overflow: hidden;
+	height: 270px;
+	.img-responsive {
+		height: 270px;
 	}
 }
 
@@ -58,8 +17,138 @@
 }
 
 .content-post-row {
-	padding-top: 20px;
+	padding: 20px 0;
 }
+
+.post-image {
+	border: 1px solid #acadad;
+	padding: 8px;
+	img {
+		width: 100%;
+	}
+}
+
+.row-post_title {
+	padding: 25px 0;
+}
+
+.post-title {
+	@include font-size(30px);
+	color: #0e6797;
+	font-family: $helvneue-bdcn;
+	text-transform: uppercase;
+}
+
+.informations_post {
+	border-bottom: 4px solid #acadad;
+	margin-bottom: 20px;
+	padding: 20px 0;
+	position: relative;
+	&:before {
+		background-color: #29abdf;
+		border-right: 3px solid #FFFFFF;
+		bottom: -4px;
+		content: '';
+		height: 4px;
+		left: 0;
+		position: absolute;
+		width: 65px;
+	}
+}
+
+.info-post_subtitle {
+	@include font-size(24px);
+	color: #515151;
+	font-family: $helvneue-bdcn;
+	text-transform: uppercase;
+}
+
+.box-infos {
+	border: 1px solid #acadad;
+	padding: 0 23px;
+}
+
+.box-infos_list {
+	list-style: none;
+	padding: 0;
+}
+
+.box-infos_item {
+	@include font-size(18px);
+	color: #58595b;
+	font-family: $helvneue-cn;
+	height: 32px;
+	padding: 7px 30px;
+	position: relative;
+	span {
+		font-family: $helvneue-bdcn;
+	}
+	&:before {
+		background: transparent url('images/sprite-infos.png') center top no-repeat;
+		content: '';
+		height: 16px;
+		left: 0;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 26px;
+	}
+	&.item-horario {
+		&:before {
+			background: transparent url('images/sprite-infos.png') center -30px no-repeat;
+		}
+	}
+	&.item-vagas {
+		&:before {
+			background: transparent url('images/sprite-infos.png') center -59px no-repeat;
+		}
+	}
+	&.item-carga {
+		&:before {
+			background: transparent url('images/sprite-infos.png') center -86px no-repeat;
+		}
+	}
+	&.item-responsavel {
+		&:before {
+			background: transparent url('images/sprite-infos.png') center -115px no-repeat;
+		}
+	}
+	&.item-local {
+		&:before {
+			background: transparent url('images/sprite-infos.png') center bottom no-repeat;
+		}
+	}
+}
+
+.info-post_text {
+	@include font-size(16px);
+	font-family: $helvneue-cn;
+	margin-bottom: 10px;
+}
+
+.post-sub_title {
+	color: #29abdf;
+	font-family: $helvneue-bdcn;
+}
+
+.post-info_values {
+	@include font-size(18px);
+	color: #29abdf;
+	font-family: Arial;
+	margin-bottom: 5px;
+}
+
+.btn-subscribe {
+	@include font-size(24px);
+	background: #9bcbec;
+	border: 1px solid #1a77b9;
+	color: #FFFFFF;
+	display: block;
+	font-family: $helvneue-cn;
+	padding: 7px 0;
+	text-align: center;
+}
+
 
 .sidebar-post-col {
 	margin-top: 30px;
@@ -67,13 +156,19 @@
 		margin: 20px 0 15px;
 	}
 	@include breakpoint(small, 'min') {
-		padding-left: 80px;
+		padding: 0 40px;
 	}
 	.widget_text {
 		text-align: center;
 		@include breakpoint(small, 'max') {
 			display: none;
 		}
+		.btn-subscribe {
+			margin: 0 25px;
+		}
+	}
+	.widget {
+		margin-bottom: 20px;
 	}
 }
 
@@ -83,7 +178,7 @@
 		padding: 20px 10px;
 	}
 
-	h1, 
+	h1,
 	h2,
 	h3,
 	h4,
@@ -93,7 +188,7 @@
 		margin: inherit;
 		padding: inherit;
 	}
-	
+
 	h1,
 	h2,
 	h3,
@@ -205,7 +300,7 @@
 		color: #21759b;
 		display: block;
 		//font-size: 14px;
-		font-size: 0.875rem;
+		font-size: .875rem;
 		font-weight: bold;
 		height: auto;
 		left: 5px;

@@ -18,7 +18,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<link rel="stylesheet" type="text/css" href="<?php //echo get_stylesheet_uri(); ?>" >
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=1.2" >
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=1.3" >
 	<?php wp_head(); ?>
 </head>
 
@@ -34,12 +34,14 @@
 
 			<!-- .site Content -->
 			<div id="content" class="site-content">
-				<!-- BREADCRUMB -->
-				<div class="container">
-					<div class="row no gutter">
-						<div class="col-xs-12">
-							<?php custom_breadcrumbs(); ?>
+				<?php if ( !is_single() ) { ?>
+					<!-- BREADCRUMB -->
+					<div class="container">
+						<div class="row no gutter">
+							<div class="col-xs-12">
+								<?php custom_breadcrumbs(); ?>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- BREADCRUMB -->
+					<!-- BREADCRUMB -->
+				<?php } ?>

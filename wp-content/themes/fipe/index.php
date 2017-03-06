@@ -11,21 +11,14 @@
 		<!-- Banner Home -->
 		<div class="row no-gutter">
 			<div class="col-xs-12">
-				<div class="slide-home">
+				<div>
 					<!-- LOOP WP Query -->
 					<!-- Para um completo controle da customização do looping de posts e criar varios loopings -->
 					<?php // Loop 1
-					$args = array(
-						'orderby' => array( 'date' => 'DESC' ),
-						'posts_per_page' => 4,
-						'featured' => 'yes'
-					);
-					$query = new WP_Query($args); // exclude category
-					while($query->have_posts()) : $query->the_post();
 
 						get_template_part( 'templates/banner' );
 
-					endwhile; ?>
+					?>
 					<!-- LOOP WP Query -->
 				</div>
 			</div>

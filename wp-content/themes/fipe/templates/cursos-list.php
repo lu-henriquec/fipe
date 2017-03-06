@@ -1,6 +1,16 @@
 <div class="row no-gutter center-xs">
 	<div class="col-xs">
-		<ul class="cursos-listagem">
+		<?php
+			wp_nav_menu( array(
+				'menu' => 'Menu sidebar',
+				'container' => 'nav',
+				// 'container_class' => 'menu',
+				'menu_class' => 'cursos-listagem',
+				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+				)
+			);
+		?>
+		<!-- <ul class="cursos-listagem">
 			<li class="curso-item">
 				<a href="">
 					<img src="<?php bloginfo('template_url'); ?>/images/cursos/mba.png" alt="">
@@ -43,6 +53,6 @@
 					<p>corpo docente</p>
 				</a>
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 </div>

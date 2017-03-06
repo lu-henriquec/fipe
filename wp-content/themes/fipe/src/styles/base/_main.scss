@@ -15,8 +15,8 @@ $line-height-integer: #{$line-height-ratio};
 }
 
 html {
-	overflow-y: scroll;
 	overflow-x: hidden;
+	overflow-y: scroll;
 
 	body { opacity: 1 !important; } //prevent vwo flash
 }
@@ -85,7 +85,7 @@ hr {
 }
 
 .ads {
-	.widget{
+	.widget {
 		margin: 0 auto;
 	}
 }
