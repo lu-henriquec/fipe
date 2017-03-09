@@ -3,3 +3,35 @@
 //------------------------------------
 //  CATEGORY PAGE STYLE
 //------------------------------------
+
+.page-title {
+	&.info-post_subtitle {
+		@include font-size(54px);
+		color: #0e6797;
+		font-family: $helvneue-cn;
+	}
+}
+
+.category-container {
+	.informations_post {
+		padding-bottom: 5px;
+	}
+}
+
+.read_more-link {
+	@include font-size(26px);
+	color: #58595b;
+	font-family: $helvneue-cn;
+	opacity: 1;
+	position: relative;
+	text-transform: uppercase;
+	&:before {
+		background:transparent url('images/ico/ico_readmore.png') center center no-repeat;
+		content: '';
+		height: 25px;
+		position: absolute;
+		top: -3px;
+		right: -35px;
+		width: 27px;
+	}
+}

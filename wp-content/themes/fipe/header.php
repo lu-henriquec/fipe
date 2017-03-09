@@ -18,7 +18,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<link rel="stylesheet" type="text/css" href="<?php //echo get_stylesheet_uri(); ?>" >
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=1.3" >
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=1.5" >
 	<?php wp_head(); ?>
 </head>
 
@@ -34,7 +34,7 @@
 
 			<!-- .site Content -->
 			<div id="content" class="site-content">
-				<?php if ( !is_single() ) { ?>
+				<?php if ( !is_single() && !is_category() ) { ?>
 					<!-- BREADCRUMB -->
 					<div class="container">
 						<div class="row no gutter">

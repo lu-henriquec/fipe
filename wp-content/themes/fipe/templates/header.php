@@ -26,16 +26,19 @@
 				<div class="row no-gutter end-xs social-row">
 					<div class="col-md-3">
 						<div class="lang-col">
-							<div class="lg pt_br active">
-								<a href="http://www.fipe.org.br/pt-br/home">
+							<?php
+								pll_the_languages();
+							?>
+							<!-- <div class="lg pt_br active">
+								<a href="<?php //echo pll_home_url( 'pt' ); ?>" class="pt">
 									PT
 								</a>
 							</div>
 							<div class="lg en_us">
-								<a href="http://www.fipe.org.br/en-us/home">
+								<a href="<?php //echo pll_home_url( 'en' ); ?>" class="en">
 									EN
 								</a>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<div class="col-md-8">

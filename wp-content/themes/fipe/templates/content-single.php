@@ -40,7 +40,7 @@
 
 			<div class="row no-gutter content-post-row">
 				<!-- Conteudo Post -->
-				<div class="col-xs-12 col-md-8">
+				<div class="col-xs-12 col-md-9">
 					<!-- Row Post Title -->
 					<div class="row no-gutter">
 						<div class="col-xs-12">
@@ -206,7 +206,7 @@
 				<!-- Conteudo Post -->
 
 				<!-- Sidebar Post -->
-				<div class="col-xs-12 col-md-4 end-md center-xs">
+				<div class="col-xs-12 col-md-3 end-md center-xs">
 					<div class="sidebar-post-col">
 						<?php dynamic_sidebar('sidebarpost'); ?>
 					</div>

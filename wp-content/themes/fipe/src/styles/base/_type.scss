@@ -72,11 +72,16 @@ h5 {
 	padding: 10px 25px;
 	text-transform: uppercase;
 }
-.info-title {
-	@include font-size(18px);
-	font-family: $proximanova-bold;
-	margin-bottom: 18px;
+.info-title, .date-post {
+	@include font-size(26px);
+	color: #0e6797;
+	font-family: $helvneue-bdcn;
 	opacity: 1;
+	text-transform: uppercase;
+}
+
+.date-post {
+	color: #000000;
 }
 
 .info-description {

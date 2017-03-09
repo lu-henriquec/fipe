@@ -256,7 +256,8 @@
 	border-right: solid 1px #c1cddb;
 	font-size: 0;
 	padding-right: 15px;
-	.lg {
+	.lg,
+	.lang-item {
 		background: #becdda;
 		border-radius: 0 26px 26px 0;
 		display: inline-block;
@@ -270,21 +271,17 @@
 			color: #fff;
 			display: block;
 			font-family: $bebas_neueregular;
+			padding: 4px 3px 0 0;
 			text-align: center;
 			text-decoration: none;
 		}
-		&.pt_br {
+		&.lang-item-first {
 			border-radius: 26px 0 0 26px;
 			a {
 				padding: 4px 0 0 3px;
 			}
 		}
-		&.en_us {
-			a {
-				padding: 4px 3px 0 0;
-			}
-		}
-		&.active {
+		&.active, &.current-lang {
 			background: #92a4b4;
 		}
 	}

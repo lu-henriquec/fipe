@@ -76,7 +76,7 @@
 	.widget_nav_menu {
 		border: 1px solid #1a77b9;
 		padding: 15px;
-		h4 {
+		h4, .title-sidebar {
 			@include font-size(16px);
 			color: #0e6797;
 			font-family: $helvneue-bdcn;

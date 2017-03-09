@@ -138,22 +138,6 @@ function add_defer_attribute($tag) {
 add_filter('script_loader_tag', 'add_defer_attribute', 10, 2);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // add admin scripts
 function wdscript() {
 	wp_enqueue_media();
@@ -228,16 +212,16 @@ if (function_exists('register_sidebar')) {
 		'description'   => 'Sidebar Post.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
+		'before_title'  => '<h4 class="title-sidebar">',
 		'after_title'   => '</h4>'
 	));
 	register_sidebar(array(
-		'name' => 'Banner ads',
-		'id'   => 'bannerads',
-		'description'   => 'Banner ads Sidebar',
+		'name' => 'Sidebar Left',
+		'id'   => 'sidebarleft',
+		'description'   => 'Sidebar left.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3>',
+		'before_title'  => '<h3 class="title-sidebar">',
 		'after_title'   => '</h3>'
 	));
 	register_sidebar(array(
@@ -863,7 +847,7 @@ function config_widget_register() {
 	//register_widget( 'WP_GetImages' );
 	//register_widget( 'WP_MobGetImages' );
 }
-add_action('widgets_init','config_widget_register');
+//add_action('widgets_init','config_widget_register');
 
 ////////////////////
 // CUSTOM TAXONOMY

@@ -128,12 +128,16 @@ h5 {
   padding: 10px 25px;
   text-transform: uppercase; }
 
-.info-title {
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-family: "proximanova-bold", "Helvetica Neue", Arial, sans-serif;
-  margin-bottom: 18px;
-  opacity: 1; }
+.info-title, .date-post {
+  font-size: 26px;
+  font-size: 1.625rem;
+  color: #0e6797;
+  font-family: "Helvetica Neue LT Std BdCn", "Helvetica Neue", Arial, sans-serif;
+  opacity: 1;
+  text-transform: uppercase; }
+
+.date-post {
+  color: #000000; }
 
 .info-description {
   font-size: 16px;
@@ -952,7 +956,8 @@ form {
   border-right: solid 1px #c1cddb;
   font-size: 0;
   padding-right: 15px; }
-  .lang-col .lg {
+  .lang-col .lg,
+  .lang-col .lang-item {
     background: #becdda;
     border-radius: 0 26px 26px 0;
     display: inline-block;
@@ -962,21 +967,25 @@ form {
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     width: 26px; }
-    .lang-col .lg a {
+    .lang-col .lg a,
+    .lang-col .lang-item a {
       font-size: 16px;
       font-size: 1rem;
       color: #fff;
       display: block;
       font-family: "Bebas Neue", "Helvetica Neue", Arial, sans-serif;
+      padding: 4px 3px 0 0;
       text-align: center;
       text-decoration: none; }
-    .lang-col .lg.pt_br {
+    .lang-col .lg.lang-item-first,
+    .lang-col .lang-item.lang-item-first {
       border-radius: 26px 0 0 26px; }
-      .lang-col .lg.pt_br a {
+      .lang-col .lg.lang-item-first a,
+      .lang-col .lang-item.lang-item-first a {
         padding: 4px 0 0 3px; }
-    .lang-col .lg.en_us a {
-      padding: 4px 3px 0 0; }
-    .lang-col .lg.active {
+    .lang-col .lg.active, .lang-col .lg.current-lang,
+    .lang-col .lang-item.active,
+    .lang-col .lang-item.current-lang {
       background: #92a4b4; }
 
 .footer {
@@ -1443,54 +1452,42 @@ form {
   .widget-list-item.no-image .content-infos {
     width: 100%; }
 
-.posts-container {
-  border: 3px solid #33a9f4;
-  border-width: 3px 0;
-  padding: 50px 0 40px; }
+.page-title.info-post_subtitle {
+  font-size: 54px;
+  font-size: 3.375rem;
+  color: #0e6797;
+  font-family: "Helvetica Neue LT Std Cn", "Helvetica Neue", Arial, sans-serif; }
+
+.category-container .informations_post {
+  padding-bottom: 5px; }
+
+.read_more-link {
+  font-size: 26px;
+  font-size: 1.625rem;
+  color: #58595b;
+  font-family: "Helvetica Neue LT Std Cn", "Helvetica Neue", Arial, sans-serif;
+  opacity: 1;
+  position: relative;
+  text-transform: uppercase; }
+  .read_more-link:before {
+    background: transparent url("images/ico/ico_readmore.png") center center no-repeat;
+    content: '';
+    height: 25px;
+    position: absolute;
+    top: -3px;
+    right: -35px;
+    width: 27px; }
 
 .content-post {
   float: left;
-  padding: 20px 0;
   width: 100%; }
-  .content-post:first-child {
-    padding: 0 0 20px; }
-  .content-post:last-child {
-    padding: 20px 0 0; }
-  .content-post .info-title {
-    margin: 0;
-    padding: 28px 0 13px; }
 
-.img,
 .content-infos {
+  border-bottom: 1px dotted #58595b;
+  border-width: 5px;
   float: left;
+  padding-bottom: 5px;
   width: 100%; }
-
-.img {
-  max-width: 460px; }
-
-.content-infos {
-  max-height: 225px;
-  max-width: 720px;
-  overflow: hidden;
-  padding-left: 20px; }
-
-.date {
-  font-size: 13px;
-  font-size: 0.8125rem;
-  color: #33a9f4;
-  font-family: "proximanova-regular", "Helvetica Neue", Arial, sans-serif;
-  padding-top: 4px; }
-
-.content-text {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: "proximanova-light", "Helvetica Neue", Arial, sans-serif; }
-
-.img-list {
-  width: 100%; }
-
-.top-page {
-  padding: 0 15px; }
 
 .home-conteudo {
   font-family: Helvetica;
@@ -1557,7 +1554,7 @@ form {
 .sidebar-post-col .widget_nav_menu {
   border: 1px solid #1a77b9;
   padding: 15px; }
-  .sidebar-post-col .widget_nav_menu h4 {
+  .sidebar-post-col .widget_nav_menu h4, .sidebar-post-col .widget_nav_menu .title-sidebar {
     font-size: 16px;
     font-size: 1rem;
     color: #0e6797;
@@ -1744,7 +1741,7 @@ form {
   .search-open {
     display: none; }
   .sidebar-post-col {
-    padding: 0 40px; } }
+    padding-left: 20px; } }
 
 @media (min-width: 992px) {
   .slick-dots {
@@ -2109,15 +2106,6 @@ form {
     width: 100%; }
   .widget-list-item .content-infos {
     max-width: 75%;
-    width: 100%; }
-  .content-post .info-title {
-    font-size: 14px;
-    font-size: 0.875rem;
-    padding: 5px 0; }
-  .content-infos {
-    padding: 0 5px; }
-  .content-text {
-    font-size: 14px;
-    font-size: 0.875rem; } }
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
