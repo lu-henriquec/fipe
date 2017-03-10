@@ -34,14 +34,3 @@
 
 			<!-- .site Content -->
 			<div id="content" class="site-content">
-				<?php if ( !is_single() && !is_category() ) { ?>
-					<!-- BREADCRUMB -->
-					<div class="container">
-						<div class="row no gutter">
-							<div class="col-xs-12">
-								<?php custom_breadcrumbs(); ?>
-							</div>
-						</div>
-					</div>
-					<!-- BREADCRUMB -->
-				<?php } ?>
