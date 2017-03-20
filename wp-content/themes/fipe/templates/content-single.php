@@ -214,6 +214,10 @@
 					</div>
 				</div>
 				<!-- Sidebar Post -->
+
+				<!-- Link Topo -->
+				<a href="#page" class="btn-top">Voltar ao topo</a>
+				<!-- Link Topo -->
 			</div>
 
 		</main><!-- #main -->

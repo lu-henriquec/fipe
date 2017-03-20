@@ -5,26 +5,31 @@
 //------------------------------------
 
 .not-found-row {
-	margin-bottom: 60px;
+	margin: 60px 0;
 	@include breakpoint (small, 'max') {
 		margin: 0 0 20px;
 	}
 	.title-call {
-		border: none;
+		@include font-size(40px);
+		font-family: $bebas_neueregular;
+		margin-bottom: 20px;
+		font-weight: 100;
 	}
 }
 
 .not-found-text {
-	@include font-size(16px); 
-	font-family: $proximanova-light;
+	@include font-size(16px);
+	background-color: #f2f4f7;
+	font-family: $bebas_neueregular;
 	margin-bottom: 30px;
+	padding: 20px 0;
 }
 
 .btn {
-	@include font-size(16px); 
-	background-color: $color-three;
-	color: $color-four;
-	font-family: $proximanova-bold;
+	@include font-size(16px);
+	border: 1px solid #000000;
+	color: #000000;
+	font-family: $bebas_neueregular;
 	&.btn-default {
 		padding: 10px 45px;
 	}
@@ -38,4 +43,14 @@
 			width: 80%;
 		}
 	}
+}
+
+.box-notfound {
+	background: #fff;
+	border: 1px solid #becdda;
+	color: #000000;
+	min-height: 380px;
+	padding: 50px;
+	position: relative;
+	text-align: center;
 }

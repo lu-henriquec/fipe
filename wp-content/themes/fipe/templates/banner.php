@@ -1,5 +1,11 @@
 <div class="banner">
 	<div>
-		<img src="<?php bloginfo('template_url'); ?>/images/banner-home.jpg" alt="" class="img-responsive"/>
+		<a href="<?php the_permalink(); ?>" rel="bookmark">
+			<?php
+				if ( has_post_thumbnail() ) { ?>
+					<img src="<?php the_post_thumbnail_url('full'); ?>" alt="" class="img-responsive" />
+				<?php }
+			?>
+		</a>
 	</div>
 </div>

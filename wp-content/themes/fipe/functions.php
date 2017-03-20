@@ -49,7 +49,7 @@ function template_script() {
 		wp_enqueue_script('jquery');
 
 		wp_enqueue_media();
-		wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.min.js', array('jquery'), NULL, true );
+		wp_enqueue_script( 'app', get_template_directory_uri() . '/js/app.min.js?v=1.1', array('jquery'), NULL, true );
 	}
 }
 add_action('wp_enqueue_scripts', 'template_script');
@@ -213,6 +213,15 @@ if (function_exists('register_sidebar')) {
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="title-sidebar">',
+		'after_title'   => '</h4>'
+	));
+	register_sidebar(array(
+		'name' => 'Sidebar Home',
+		'id'   => 'sidebarhome',
+		'description'   => 'Sidebar Home.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="cursos-title">',
 		'after_title'   => '</h4>'
 	));
 	register_sidebar(array(

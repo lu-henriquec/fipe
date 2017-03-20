@@ -142,6 +142,9 @@ form {
 	input::-webkit-input-placeholder { // WebKit, Blink, Edge
 		color: #53b3f7;
 	}
+	.btn {
+		display: none;
+	}
 }
 
 // .btn-search {

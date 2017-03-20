@@ -29,9 +29,3 @@
 		padding: 10px;
 	}
 }
-
-.slide-home {
-	@include breakpoint(small, 'max') {
-		margin-bottom: 20px;
-	}
-}

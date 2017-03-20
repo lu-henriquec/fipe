@@ -7,44 +7,50 @@ get_header(); ?>
 
 
 	<?php if ( have_posts() ) : ?>
-		
-		<div class="container">
+
+		<div class="container search-container">
+
+			<!-- Page -->
 			<div class="row">
-				<div class="col-xs-12">
-					<h1 class="title-call">
-						<span class="title-call_span">Resultados de busca para </span>
-						<?php printf( ('%s'), get_search_query() ); ?>
-					</h1>
-				</div>
-			</div>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<div class="row">
-					<div class="col-xs-12">
-						<?php get_template_part( 'templates/content-search' ); ?>
+				<!-- Sidebar Post -->
+				<div class="col-xs-12 col-md-3 end-md center-xs">
+					<div class="sidebar-post-col">
+						<?php dynamic_sidebar('sidebarleft'); ?>
 					</div>
 				</div>
-
-			<?php endwhile; ?>
-
-			<!-- Navigation -->
-			<div class="row center-xs middle-xs pagination-row">
-				<div class="col-xs-12">
-					<?php the_posts_pagination( array( 
-							'mid_size'  => 5,
-							'screen_reader_text' =>  ' ',
-							'prev_text' => '',
-							'next_text' => ''
-							) 
-						); 
+				<!-- Sidebar Post -->
+				<div class="col-xs-12 col-md-9">
+					<?php
+						$nameCategory 	= $queried_object->name;
+						$slugCategory 	= $queried_object->slug;
 					?>
+					<div class="informations_post">
+						<h1 class="search-title" >
+							Resultados de busca para "<?php printf( ('%s'), get_search_query() ); ?>"
+						</h1>
+					</div>
+					<!-- Posts Looping -->
+					<div class="row no-gutter posts-container">
+						<div class="col-xs-12">
+							<?php while ( have_posts() ) : the_post(); ?>
+
+								<div class="row">
+									<div class="col-xs-12">
+										<?php get_template_part( 'templates/content-search' ); ?>
+									</div>
+								</div>
+
+							<?php endwhile; ?>
+						</div>
+					</div>
+					<!-- Posts Looping -->
+
 				</div>
 			</div>
-			<!-- Navigation -->
+			<!-- Page -->
 
 		</div>
+
 
 	<?php else : ?>
 

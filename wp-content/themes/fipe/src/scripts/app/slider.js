@@ -8,7 +8,7 @@ module.exports = function() {
 		arrows: true,
 		autoplay: true,
 		centerMode: true,
-		dots: true,
+		dots: false,
 		fade: true,
 		infinite: true,
 		slidesToShow: 1,

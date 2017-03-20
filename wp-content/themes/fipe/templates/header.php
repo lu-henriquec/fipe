@@ -1,18 +1,28 @@
 <div class="pre-header">
-	<div class="container">
-		<div class="row middle-xs between-xs">
-			<div class="col-md-2 col-xs-12">
-				<a href="<?php bloginfo('url'); ?>" title="Para Onde For">
-					<img src="<?php bloginfo('template_url'); ?>/images/logo_fipe.png" class="logo" alt="Fipe">
+	<?php
+		$formAction = site_url();
+		$formValue = get_search_query();
+	?>
+	<div class="container row-header-mobile">
+		<div class="row start-xs middle-md between-xs no-gutter-md">
+			<div class="menu-open-container show-md">
+				<a href="" title="Menu" class="menu-open">
+					<span class=""></span>
 				</a>
 			</div>
-			<div class="col-md-4 col-xs-12">
+			<div class="col-md-2 col-xs-4">
+				<a href="<?php bloginfo('url'); ?>" title="Para Onde For">
+					<img src="<?php bloginfo('template_url'); ?>/images/logo_fipe.png" class="logo hide-md" alt="Fipe">
+				</a>
+			</div>
+			<div class="col-md-2 col-xs-4 show-md center-xs">
+				<a href="<?php bloginfo('url'); ?>" title="Para Onde For">
+					<img src="<?php bloginfo('template_url'); ?>/images/logo-fipe-mob.jpg" class="logo" alt="Fipe">
+				</a>
+			</div>
+			<div class="col-md-4 col-xs-4">
 				<div class="row no-gutter form-row">
 					<div class="col-xs-12">
-						<?php
-							$formAction = esc_url(home_url( '/' ));
-							$formValue = get_search_query();
-						?>
 						<form action="<?php echo $formAction ?>" role="search" method="get" class="form form-search">
 							<fieldset>
 								<div>
@@ -24,7 +34,7 @@
 					</div>
 				</div>
 				<div class="row no-gutter end-xs social-row">
-					<div class="col-md-3">
+					<div class="col-md-3 col-xs-12">
 						<div class="lang-col">
 							<?php
 								pll_the_languages();
@@ -41,7 +51,7 @@
 							</div> -->
 						</div>
 					</div>
-					<div class="col-md-8">
+					<div class="col-md-8 hide-md">
 						<div class="social-col">
 							<ul>
 								<li class="social-item">
@@ -62,18 +72,28 @@
 							</ul>
 						</div>
 					</div>
+					<div class="show-md">
+						<a href="" title="Search" class="search-open"></a>
+					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="search_mobile">
+		<form action="<?php echo $formAction ?>" role="search" method="get" class="form form-search">
+			<fieldset>
+				<div>
+					<input type="text" class="input-search" name="s" value="<?php '.$formValue.' ?>" />
+					<button type="submit" class="btn btn-search" id="searchsubmit" value=""></button>
+				</div>
+			</fieldset>
+		</form>
 	</div>
 </div>
 <div class="menu-row">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<a href="" title="Menu" class="menu-open">
-					<span class=""></span>
-				</a>
 				<?php
 					wp_nav_menu( array(
 						'menu' => 'Menu principal',
@@ -84,7 +104,6 @@
 						)
 					);
 				?>
-				<a href="" title="Search" class="search-open"></a>
 			</div>
 		</div>
 	</div>

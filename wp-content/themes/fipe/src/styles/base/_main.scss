@@ -63,11 +63,18 @@ hr {
 	}
 }
 
-.show-xs {
-	@include breakpoint(extra-small, 'min') {
+.show-md {
+	@include breakpoint(medium, 'min') {
 		display: none;
 	}
 }
+
+.hide-md {
+	@include breakpoint(medium, 'max') {
+		display: none;
+	}
+}
+
 
 .addthis-smartlayers-mobile {
 	@include breakpoint(small, 'max') {

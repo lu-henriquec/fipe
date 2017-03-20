@@ -3,17 +3,13 @@
 //load modules
 require('app/helpers');
 
-var slider = require('app/slider'),
-	modal = require('app/modal'),
+var modal = require('app/modal'),
 	menu = require('app/menu'),
-	motor = require('app/motor'),
-	mapa = require('app/mapa');
+	slider = require('app/slider');
 
 
 $(function() {
-	slider();
 	modal();
 	menu();
-	motor();
-	mapa();
+	slider();
 });

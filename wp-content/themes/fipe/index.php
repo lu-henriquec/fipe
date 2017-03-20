@@ -11,27 +11,13 @@
 		<!-- Banner Home -->
 		<div class="row no-gutter">
 			<div class="col-xs-12">
-				<div>
-					<!-- LOOP WP Query -->
-					<!-- Para um completo controle da customização do looping de posts e criar varios loopings -->
-					<?php // Loop 1
-
-						get_template_part( 'templates/banner' );
-
-					?>
-					<!-- LOOP WP Query -->
-				</div>
+				<?php get_template_part( 'templates/destaque' ); ?>
 			</div>
 		</div>
 		<!-- Banner Home -->
 
 		<!-- cursos -->
 		<div class="cursos-row">
-			<div class="row no-gutter center-xs">
-				<div class="col-xs-12">
-					<h2 class="cursos-title">conheça os cursos fipe</h2>
-				</div>
-			</div>
 			<?php get_template_part( 'templates/cursos-list' ); ?>
 		</div>
 		<!-- cursos -->
@@ -40,20 +26,25 @@
 
 	<div class="container">
 
+		<?php
+			global $wp_query;
+			$id = $wp_query->post->ID;
+		?>
+
 		<!-- Conteudo -->
 		<div class="home-conteudo">
 			<div class="row start-xs">
 				<div class="col-xs-12 col-md-6">
 					<h2 class="title-conteudo">
-						<?php the_field('titulo');?>
+						<?php the_field('titulo', $id);?>
 					</h2>
 					<p class="text-conteudo">
-						<?php the_field('texto_principal');?>
+						<?php the_field('texto_principal', $id);?>
 					</p>
 				</div>
 				<div class="col-xs-12 col-md-6 text-sec">
-				 	<p class="text-conteudo">
-						<?php the_field('texto_secundario');?>
+					<p class="text-conteudo">
+						<?php the_field('texto_secundario', $id);?>
 					</p>
 				</div>
 			</div>

@@ -2,22 +2,15 @@
 
 module.exports = function() {
 
-	$(document).on('click', '.sobre a', function(e){
+	//$(document).on('click', '.btn-subscribe', function(e){
+	$('.btn-subscribe').on('click', function (e) {
 		e.preventDefault();
-		$('.sobre-modal').removeClass('hide');
+		$('.subscribe-modal').removeClass('hide');
 	});
 
-	$(document).on('click', '.termos a', function(e){
-		e.preventDefault();
-		$('.termos-modal').removeClass('hide');
-	});
 
-	$(document).on('click', '.politica a', function(e){
-		e.preventDefault();
-		$('.termos-politica').removeClass('hide');
-	});
-
-	$(document).on('click', '.close', function(e){
+	//$(document).on('click', '.close', function(e){
+	$('.close').on('click', function (e) {
 		e.preventDefault();
 		$(this).closest('.themodal-overlay').addClass('hide');
 	})

@@ -10,6 +10,9 @@
 }
 
 .cursos-title {
+	@include font-size(32px);
+	color: #0e6797;
+	font-family: $helvneue-cn;
 	padding: 30px 0;
 	text-transform: uppercase;
 }
@@ -19,7 +22,9 @@
 	margin: 0;
 	padding: 0;
 }
-.menu-menu-sidebar-container {
+.menu-menu-sidebar-container,
+.menu-menusidebar_en-container,
+.menu-menusidebar_pt-container {
 	.menu-item {
 		color: #92a4b2;
 		display: inline-block;
