@@ -1,5 +1,23 @@
 @charset 'UTF-8';
 
+.site-inner {
+	@include breakpoint(medium, 'max') {
+		left: 0;
+		position: relative;
+		top: 0;
+		transition: all .25s ease;
+	}
+}
+
+.menu-active {
+	.site-inner {
+		@include breakpoint(medium, 'max') {
+			left: 80%;
+		}
+	}
+}
+
+
 .pre-header {
 	background-color: $color-four;
 	@include breakpoint(medium, 'min') {
@@ -103,16 +121,20 @@
 	padding: 0;
 	@include breakpoint(small, 'max') {
 	    -webkit-transition: left 300ms ease-in-out;
-		background-color: #f0f0f0;
-		left: -90%;
-		padding: 80px 10px 10px;
+		background-color: #dee6ec;
+		height: 100%;
+		left: 0;
+		min-width: 140px;
+		//max-width: 440px;
+		padding: 0;
 		position: fixed;
 		top: 0;
-	    transition: left 300ms ease-in-out;
-		width: 90%;
-		z-index: 1;
+		transition: all .25s ease-in-out;
+		transform: translateX(-100%);
+		width: 80%;
+		z-index: 10;
 		&.active {
-			left: 0;
+			transform: translateX(0);
 		}
 	}
 	.menu-item {
@@ -177,16 +199,19 @@
 			}
 		}
 		@include breakpoint(small, 'max') {
-			border-bottom: 2px solid #b4b4b4;
+			@include font-size(20px);
+			border-bottom: 1px solid rgba(0, 0, 0, .1);
+			color: #20a1fa;
 			float: none;
 			max-width: 100%;
-			padding: 15px 10px;
+			padding: 25px;
 			text-align: left;
 			&:hover {
-				color: $color-one;
+				background-color: inherit;
+				color: inherit;
 			}
-			&:last-child {
-				border: none;
+			&:before {
+				display: none;
 			}
 		}
 	}

@@ -4,28 +4,8 @@
 	width: 100%;
 }
 
-.banner-infos {
-	bottom: 75px;
-	max-width: 440px;
-	//position: absolute;
-	right: 0;
-	width: 100%;
-	@include breakpoint(small, 'max') {
-		bottom: 40px;
-	}
-}
-
-.info-destaque {
-	display: inline-block;
-	margin-bottom: 2px;
-}
-
-.info-box {
-	background-color: $color-one;
-	// max-height: 145px;
-	overflow: hidden;
-	padding: 30px 35px 30px 30px;
-	@include breakpoint(small, 'max') {
-		padding: 10px;
-	}
-}
+// .banner {
+// 	@include breakpoint(medium, 'max') {
+// 		height: 200px;
+// 	}
+// }

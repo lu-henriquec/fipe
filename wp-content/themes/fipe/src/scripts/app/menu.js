@@ -5,7 +5,8 @@ module.exports = function() {
 	$('.menu-open-container').click(function(e) {
 		e.preventDefault();
 		$(this).find('a.menu-open').toggleClass('active');
-		$('.header-menu').toggleClass('active');;
+		$('.header-menu').toggleClass('active');
+		$('body').toggleClass('menu-active');
 		return false;
 	});
 

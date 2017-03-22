@@ -31,6 +31,9 @@
 		padding: 50px 20px 0;
 		position: relative;
 		text-transform: uppercase;
+		@include breakpoint(medium, 'max') {
+			padding-bottom: 20px;
+		}
 		&:before {
 			content: '';
 			height: 40px;
@@ -73,6 +76,11 @@
 			&:before {
 				background: transparent url('images/cursos/corpo-docente.png') center center no-repeat;
 			}
+		}
+	}
+	.menu {
+		@include breakpoint(medium, 'max') {
+			padding: 0;
 		}
 	}
 }

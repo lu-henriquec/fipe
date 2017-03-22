@@ -18,6 +18,9 @@
 
 .content-post-row {
 	padding: 20px 0;
+	@include breakpoint(medium, 'max') {
+		padding: 20px 5px;
+	}
 }
 
 .post-image {
@@ -66,6 +69,9 @@
 .box-infos {
 	border: 1px solid #acadad;
 	padding: 0 23px;
+	@include breakpoint(medium, 'max') {
+		padding: 10px;
+	}
 }
 
 .box-infos_list {
