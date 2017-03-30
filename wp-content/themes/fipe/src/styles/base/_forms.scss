@@ -100,26 +100,6 @@ form {
 	margin-top: 50px;
 }
 
-.form-contact {
-	input,
-	textarea {
-		width: 100%;
-	}
-	.form-title {
-		margin-bottom: 20px;
-	}
-	.row {
-		padding: 5px 0;
-		@include breakpoint(small, 'max') {
-			&.first-row {
-				input {
-					margin-top: 10px;
-					padding: 10px;
-				}
-			}
-		}
-	}
-}
 
 .form-description {
 	@include font-size(16px);
@@ -144,6 +124,34 @@ form {
 	}
 	.btn {
 		display: none;
+	}
+}
+
+.form-field-large {
+
+}
+
+.form-cadastro {
+	.form_part-2 {
+		input[type='text'],
+		label {
+			display: inline-block;
+		}
+		input[type='text'] {
+			padding: 5px;
+		}
+		.form-field-large {
+			input[type='text'],
+			input[type='email']{
+				width: 265px;
+			}
+		}
+		.form-field-small {
+			input[type='text'],
+			input[type='email']{
+				width: 100px;
+			}
+		}
 	}
 }
 

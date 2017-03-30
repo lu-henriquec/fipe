@@ -144,8 +144,7 @@ $slick-opacity-not-active : .25 !default;
 
 /* Dots */
 .slick-dots {
-	@include breakpoint(medium, 'min') { bottom: 30px; }
-	@include breakpoint(medium, 'max') { bottom: 15px; }
+	bottom: -20px;
 	font-size: 0;
 	list-style: none;
 	margin: 0;
@@ -157,12 +156,12 @@ $slick-opacity-not-active : .25 !default;
 
 	li,
 	button {
-		@include breakpoint(medium, 'max') {
-			height: 15px;
-			width: 15px;
-		}
-		height: 15px;
-		width: 15px;
+		// @include breakpoint(medium, 'max') {
+		// 	height: 15px;
+		// 	width: 15px;
+		// }
+		height: 10px;
+		width: 10px;
 		z-index: 0;
 	}
 
@@ -181,6 +180,7 @@ $slick-opacity-not-active : .25 !default;
 		cursor: pointer;
 		display: block;
 		font-size: 0;
+		padding: 0;
 		transition:  transform .4s ease;
 	}
 

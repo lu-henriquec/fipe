@@ -4,6 +4,27 @@
 	width: 100%;
 }
 
+.slide-home {
+	.slick-arrow {
+		display: none!important;
+	}
+}
+
+.content-infos_banner {
+	background-color: rgba(0, 0, 0, 0.2);
+	left: 50%;
+	max-width: 1096px;
+	padding: 10px;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	.infos-title {
+		color: #ffffff;
+	}
+}
+
 // .banner {
 // 	@include breakpoint(medium, 'max') {
 // 		height: 200px;

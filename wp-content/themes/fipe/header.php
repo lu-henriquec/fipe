@@ -18,7 +18,7 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<link rel="stylesheet" type="text/css" href="<?php //echo get_stylesheet_uri(); ?>" >
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=1.0" >
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/style.css?v=1.6" >
 	<?php wp_head(); ?>
 </head>
 

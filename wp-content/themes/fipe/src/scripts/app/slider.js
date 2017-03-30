@@ -5,10 +5,10 @@ require('slick-carousel/slick/slick');
 module.exports = function() {
 
 	$('.slide-home').slick({
-		arrows: true,
+		arrows: false,
 		autoplay: true,
 		centerMode: true,
-		dots: false,
+		dots: true,
 		fade: true,
 		infinite: true,
 		slidesToShow: 1,

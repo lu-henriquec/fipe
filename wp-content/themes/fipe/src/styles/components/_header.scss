@@ -12,7 +12,7 @@
 .menu-active {
 	.site-inner {
 		@include breakpoint(medium, 'max') {
-			left: 80%;
+			left: 300px;
 		}
 	}
 }
@@ -68,16 +68,6 @@
 	// 	position: fixed;
 	// 	top: 0;
 	// }
-	&.fixed {
-		top: -60px;
-		.logo {
-			@include breakpoint(small, 'min') {
-				left: 50px;
-				top: 10px;
-				width: 115px;
-			}
-		}
-	}
 	.social-row {
 		margin-top: 15px;
 		ul {
@@ -119,22 +109,22 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	@include breakpoint(small, 'max') {
-	    -webkit-transition: left 300ms ease-in-out;
+	@include breakpoint(medium, 'max') {
 		background-color: #dee6ec;
 		height: 100%;
-		left: 0;
+		left: -300px;
 		min-width: 140px;
-		//max-width: 440px;
+		max-width: 300px;
 		padding: 0;
 		position: fixed;
 		top: 0;
-		transition: all .25s ease-in-out;
-		transform: translateX(-100%);
-		width: 80%;
+		transition: all .25s;
+		//transform: translateX(-100%);
+		width: 100%;
 		z-index: 10;
 		&.active {
-			transform: translateX(0);
+			//transform: translateX(0);
+			left: 0;
 		}
 	}
 	.menu-item {
@@ -155,7 +145,7 @@
 		a {
 			display: block;
 			padding: 23px 0 11px;
-			@include breakpoint(small, 'max') {
+			@include breakpoint(medium, 'max') {
 				padding: 0;
 			}
 		}
@@ -198,7 +188,7 @@
 				background: transparent url('images/ico/sobre-a-fipe.png') center center no-repeat;
 			}
 		}
-		@include breakpoint(small, 'max') {
+		@include breakpoint(medium, 'max') {
 			@include font-size(20px);
 			border-bottom: 1px solid rgba(0, 0, 0, .1);
 			color: #20a1fa;
@@ -341,7 +331,7 @@
 		border-right: solid 1px #c1cddb;
 		padding-right: 15px;
 	}
-	@include breakpoint(small, 'max') {
+	@include breakpoint(medium, 'max') {
 		padding-right: 54px;
 	}
 	.lg,

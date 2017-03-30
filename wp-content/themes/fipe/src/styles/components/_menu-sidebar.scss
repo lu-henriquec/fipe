@@ -13,6 +13,7 @@
 	@include font-size(32px);
 	color: #0e6797;
 	font-family: $helvneue-cn;
+	margin-bottom: 30px;
 	padding: 30px 0;
 	text-transform: uppercase;
 }
@@ -22,101 +23,165 @@
 	margin: 0;
 	padding: 0;
 }
-.menu-menu-sidebar-container,
-.menu-menusidebar_en-container,
-.menu-menusidebar_pt-container {
-	.menu-item {
-		color: #92a4b2;
-		display: inline-block;
-		padding: 50px 20px 0;
-		position: relative;
-		text-transform: uppercase;
-		@include breakpoint(medium, 'max') {
-			padding-bottom: 20px;
-		}
-		&:before {
-			content: '';
-			height: 40px;
-			left: 0;
-			position: absolute;
-			top: 0px;
-			width: 100%;
-		}
-		&.mba {
-			&:before {
-				background: transparent url('images/cursos/mba.png') center center no-repeat;
+
+.sidebarhome {
+	.widget_nav_menu {
+		.menu {
+			margin-top: 50px;
+			.menu-item a {
+				padding: 50px 20px 0;
 			}
-		}
-		&.curta {
-			&:before {
-				background: transparent url('images/cursos/curta-duracao.png') center center no-repeat;
-			}
-		}
-		&.ead {
-			&:before {
-				background: transparent url('images/cursos/ead.png') center center no-repeat;
-			}
-		}
-		&.capacitacao {
-			&:before {
-				background: transparent url('images/cursos/capacitacao.png') center center no-repeat;
-			}
-		}
-		&.preparatorios {
-			&:before {
-				background: transparent url('images/cursos/preparatorio.png') center center no-repeat;
-			}
-		}
-		&.contas {
-			&:before {
-				background: transparent url('images/cursos/contas-publicas.png') center center no-repeat;
-			}
-		}
-		&.corpo {
-			&:before {
-				background: transparent url('images/cursos/corpo-docente.png') center center no-repeat;
-			}
-		}
-	}
-	.menu {
-		@include breakpoint(medium, 'max') {
-			padding: 0;
 		}
 	}
 }
 
-.sidebar-post-col {
+.site-content {
 	.widget_nav_menu {
-		border: 1px solid #1a77b9;
-		padding: 15px;
-		h4, .title-sidebar {
-			@include font-size(16px);
-			color: #0e6797;
-			font-family: $helvneue-bdcn;
-			text-align: left;
-			text-transform: uppercase;
-		}
 		.menu {
-			padding: 0;
-		}
-		.menu-item {
-			@include font-size(18px);
-			border-top: 1px dashed #9ac3e0;
-			display: block;
-			font-family: $helvneue-bdcn;
-			height: 48px;
-			padding: 15px 0 15px 55px;
-			text-align: left;
-			&:before {
-				background-size: contain;
-				height: 30px;
-				left: 10px;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 35px;
+			.menu-item {
+				color: #92a4b2;
+				display: inline-block;
+				position: relative;
+				text-transform: uppercase;
+				@include breakpoint(medium, 'max') {
+					padding-bottom: 20px;
+				}
+				a {
+					position: relative;
+					&:before {
+						content: '';
+						height: 40px;
+						left: 0;
+						position: absolute;
+						top: 0px;
+						width: 100%;
+					}
+				}
+				&.mba {
+					a:before {
+						background: transparent url('images/cursos/mba.png') center center no-repeat;
+					}
+				}
+				&.curta {
+					a:before {
+						background: transparent url('images/cursos/curta-duracao.png') center center no-repeat;
+					}
+				}
+				&.ead {
+					a:before {
+						background: transparent url('images/cursos/ead.png') center center no-repeat;
+					}
+				}
+				&.capacitacao {
+					a:before {
+						background: transparent url('images/cursos/capacitacao.png') center center no-repeat;
+					}
+				}
+				&.preparatorios {
+					a:before {
+						background: transparent url('images/cursos/preparatorio.png') center center no-repeat;
+					}
+				}
+				&.contas {
+					a:before {
+						background: transparent url('images/cursos/contas-publicas.png') center center no-repeat;
+					}
+				}
+				&.corpo {
+					a:before {
+						background: transparent url('images/cursos/corpo-docente.png') center center no-repeat;
+					}
+				}
 			}
-			&:first-child {
-				border: none;
+			@include breakpoint(medium, 'max') {
+				padding: 0;
+			}
+		}
+	}
+}
+
+.site-content {
+	.sidebar-post-col {
+		.widget_nav_menu {
+			border: 1px solid #1a77b9;
+			padding: 15px;
+			h4, .title-sidebar {
+				@include font-size(16px);
+				color: #0e6797;
+				font-family: $helvneue-bdcn;
+				text-align: left;
+				text-transform: uppercase;
+			}
+			.menu {
+				padding: 0;
+			}
+			.menu-item {
+				@include font-size(18px);
+				border-top: 1px dashed #9ac3e0;
+				display: block;
+				font-family: $helvneue-bdcn;
+				height: 48px;
+				padding: 15px 0 15px 55px;
+				text-align: left;
+				&:before {
+					content: '';
+					height: 30px;
+					left: 10px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 35px;
+				}
+				&.mba {
+					&:before {
+						background: transparent url('images/cursos/mba.png') center center no-repeat;
+						background-size: contain;
+					}
+				}
+				&.curta {
+					&:before {
+						background: transparent url('images/cursos/curta-duracao.png') center center no-repeat;
+						background-size: contain;
+					}
+				}
+				&.ead {
+					&:before {
+						background: transparent url('images/cursos/ead.png') center center no-repeat;
+						background-size: contain;
+					}
+				}
+				&.capacitacao {
+					&:before {
+						background: transparent url('images/cursos/capacitacao.png') center center no-repeat;
+						background-size: contain;
+					}
+				}
+				&.preparatorios {
+					&:before {
+						background: transparent url('images/cursos/preparatorio.png') center center no-repeat;
+						background-size: contain;
+					}
+				}
+				&.contas {
+					&:before {
+						background: transparent url('images/cursos/contas-publicas.png') center center no-repeat;
+						background-size: contain;
+					}
+				}
+				&.corpo {
+					&:before {
+						background: transparent url('images/cursos/corpo-docente.png') center center no-repeat;
+						background-size: contain;
+					}
+				}
+				&:first-child {
+					border: none;
+				}
+				a {
+					&:before {
+						display: none;
+					}
+				}
 			}
 		}
 	}

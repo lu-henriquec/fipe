@@ -8,4 +8,7 @@
 			?>
 		</a>
 	</div>
+	<div class="content-infos_banner">
+		<h2 class="infos-title"><?php the_title(); ?></h2>
+	</div>
 </div>
